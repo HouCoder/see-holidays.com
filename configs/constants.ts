@@ -1,0 +1,15 @@
+export const REGION_COLORS = [
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'mint',
+  'teal',
+  'cyan',
+  'blue',
+  'indigo',
+  'purple',
+  'pink',
+  'brown',
+  'gray',
+];

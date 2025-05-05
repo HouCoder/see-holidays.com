@@ -1,0 +1,618 @@
+[
+  {
+    "id": 1,
+    "region_id": 1,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 2,
+    "region_id": 1,
+    "name": "Special Working Day",
+    "description": "In China, certain weekends are designated as “make‑up” working days—swapped for adjacent weekdays off—to create extended consecutive public holiday periods around festivals like Spring Festival or National Day.",
+    "link": "https://teamedupchina.com/special-working-days-china"
+  },
+  {
+    "id": 3,
+    "region_id": 1,
+    "name": "Spring Festival",
+    "description": "Chinese New Year, or the Spring Festival, is a festival that celebrates the beginning of a new year on the traditional lunisolar Chinese calendar.",
+    "link": "https://en.wikipedia.org/wiki/Chinese_New_Year"
+  },
+  {
+    "id": 4,
+    "region_id": 1,
+    "name": "Qingming Festival",
+    "description": "Qingming Festival is also called Tomb Sweeping Day as it is the time for Chinese people to show respect to their ancestors by cleaning their ancestors' tombs and placing offerings.",
+    "link": "https://en.wikipedia.org/wiki/Qingming_Festival"
+  },
+  {
+    "id": 5,
+    "region_id": 1,
+    "name": "Labour Day",
+    "description": "In China, Labour Day, also known as May Day, is a statutory holiday celebrated on May 1st. It is a national holiday, officially recognized as a public holiday since 1949.",
+    "link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+  },
+  {
+    "id": 6,
+    "region_id": 1,
+    "name": "Dragon Boat Festival",
+    "description": "The Dragon Boat Festival is a traditional Chinese holiday that occurs on the fifth day of the fifth month of the Chinese calendar, which corresponds to late May or early June in the Gregorian calendar.",
+    "link": "https://en.wikipedia.org/wiki/Dragon_Boat_Festival"
+  },
+  {
+    "id": 7,
+    "region_id": 1,
+    "name": "National Day",
+    "description": "China's National Day, celebrated annually on October 1st, commemorates the proclamation of the People's Republic of China by Mao Zedong on that date in 1949.",
+    "link": "https://en.wikipedia.org/wiki/National_Day_of_the_People%27s_Republic_of_China"
+  },
+  {
+    "id": 8,
+    "region_id": 2,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 9,
+    "region_id": 2,
+    "name": "Australia Day",
+    "description": "Australia Day is the official national day of Australia. Observed annually on 26 January, it marks the 1788 landing of the First Fleet and raising of the Union Flag of Great Britain by Arthur Phillip at Sydney Cove, a small bay on the southern shore of Sydney Harbour.",
+    "link": "https://en.wikipedia.org/wiki/Australia_Day"
+  },
+  {
+    "id": 10,
+    "region_id": 2,
+    "name": "Adelaide Cup Day",
+    "description": "The Adelaide Cup is a South Australian Jockey Club Group 2 Thoroughbred handicap horse race for three-year-olds and older, run over 3,200 metres at Morphettville Racecourse in Adelaide, Australia on the second Monday in March.",
+    "link": "https://en.wikipedia.org/wiki/Adelaide_Cup"
+  },
+  {
+    "id": 11,
+    "region_id": 2,
+    "name": "Good Friday",
+    "description": "Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.",
+    "link": "https://en.wikipedia.org/wiki/Good_Friday"
+  },
+  {
+    "id": 12,
+    "region_id": 2,
+    "name": "Easter",
+    "description": "Easter is a Christian holiday celebrating the resurrection of Jesus Christ from the dead—marking the culmination of Holy Week—and is often observed with church services, festive meals, and traditions like egg hunts and chocolate bunnies.",
+    "link": "https://en.wikipedia.org/wiki/Easter"
+  },
+  {
+    "id": 13,
+    "region_id": 2,
+    "name": "Anzac Day",
+    "description": "Anzac Day is Australia’s and New Zealand’s national day of remembrance held each April 25 to honor the members of the Australian and New Zealand Army Corps—particularly those who served and died at Gallipoli in World War I—and all who have served in conflicts, typically marked by dawn services, marches, and wreath-laying ceremonies.",
+    "link": "https://en.wikipedia.org/wiki/Anzac_Day"
+  },
+  {
+    "id": 14,
+    "region_id": 2,
+    "name": "King’s Birthday",
+    "description": "King’s Birthday is a public holiday in Australia celebrating the reigning monarch’s official birthday, observed on the second Monday in June in most states (with varying dates in Western Australia and Queensland) and marked by civic ceremonies, community events and the annual Birthday Honours.",
+    "link": "https://en.wikipedia.org/wiki/King%27s_Official_Birthday"
+  },
+  {
+    "id": 15,
+    "region_id": 2,
+    "name": "Labour Day",
+    "description": "Labour Day is a public holiday observed on varying dates across Australian states and territories to honor the achievements of the labour movement and workers, often marked by parades, community events and a long weekend.",
+    "link": "https://en.wikipedia.org/wiki/Labour_Day"
+  },
+  {
+    "id": 16,
+    "region_id": 2,
+    "name": "Christmas Day",
+    "description": "Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.",
+    "link": "https://en.wikipedia.org/wiki/Christmas"
+  },
+  {
+    "id": 17,
+    "region_id": 2,
+    "name": "Boxing Day",
+    "description": "Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.",
+    "link": "https://en.wikipedia.org/wiki/Boxing_Day"
+  },
+  {
+    "id": 18,
+    "region_id": 2,
+    "name": "Proclamation Day",
+    "description": "Proclamation Day in South Australia is a public holiday held on December 28 (or the following Monday when it falls on a weekend) commemorating the 1856 proclamation of the colony’s Constitution and its attainment of self‑government, typically marked by civic ceremonies and community events.",
+    "link": "https://en.wikipedia.org/wiki/Proclamation_Day"
+  },
+  {
+    "id": 19,
+    "region_id": 3,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 20,
+    "region_id": 3,
+    "name": "Australia Day",
+    "description": "Australia Day is the official national day of Australia. Observed annually on 26 January, it marks the 1788 landing of the First Fleet and raising of the Union Flag of Great Britain by Arthur Phillip at Sydney Cove, a small bay on the southern shore of Sydney Harbour.",
+    "link": "https://en.wikipedia.org/wiki/Australia_Day"
+  },
+  {
+    "id": 21,
+    "region_id": 3,
+    "name": "Good Friday",
+    "description": "Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.",
+    "link": "https://en.wikipedia.org/wiki/Good_Friday"
+  },
+  {
+    "id": 22,
+    "region_id": 3,
+    "name": "Easter",
+    "description": "Easter is a Christian holiday celebrating the resurrection of Jesus Christ from the dead—marking the culmination of Holy Week—and is often observed with church services, festive meals, and traditions like egg hunts and chocolate bunnies.",
+    "link": "https://en.wikipedia.org/wiki/Easter"
+  },
+  {
+    "id": 23,
+    "region_id": 3,
+    "name": "Anzac Day",
+    "description": "Anzac Day is Australia’s and New Zealand’s national day of remembrance held each April 25 to honor the members of the Australian and New Zealand Army Corps—particularly those who served and died at Gallipoli in World War I—and all who have served in conflicts, typically marked by dawn services, marches, and wreath-laying ceremonies.",
+    "link": "https://en.wikipedia.org/wiki/Anzac_Day"
+  },
+  {
+    "id": 24,
+    "region_id": 3,
+    "name": "King’s Birthday",
+    "description": "King’s Birthday is a public holiday in Australia celebrating the reigning monarch’s official birthday, observed on the second Monday in June in most states (with varying dates in Western Australia and Queensland) and marked by civic ceremonies, community events and the annual Birthday Honours.",
+    "link": "https://en.wikipedia.org/wiki/King%27s_Official_Birthday"
+  },
+  {
+    "id": 25,
+    "region_id": 3,
+    "name": "Labour Day",
+    "description": "Labour Day is a public holiday observed on varying dates across Australian states and territories to honor the achievements of the labour movement and workers, often marked by parades, community events and a long weekend.",
+    "link": "https://en.wikipedia.org/wiki/Labour_Day"
+  },
+  {
+    "id": 26,
+    "region_id": 3,
+    "name": "Christmas Day",
+    "description": "Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.",
+    "link": "https://en.wikipedia.org/wiki/Christmas"
+  },
+  {
+    "id": 27,
+    "region_id": 3,
+    "name": "Boxing Day",
+    "description": "Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.",
+    "link": "https://en.wikipedia.org/wiki/Boxing_Day"
+  },
+  {
+    "id": 28,
+    "region_id": 4,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 29,
+    "region_id": 4,
+    "name": "Australia Day",
+    "description": "Australia Day is the official national day of Australia. Observed annually on 26 January, it marks the 1788 landing of the First Fleet and raising of the Union Flag of Great Britain by Arthur Phillip at Sydney Cove, a small bay on the southern shore of Sydney Harbour.",
+    "link": "https://en.wikipedia.org/wiki/Australia_Day"
+  },
+  {
+    "id": 30,
+    "region_id": 4,
+    "name": "Labour Day",
+    "description": "Labour Day is a public holiday observed on varying dates across Australian states and territories to honor the achievements of the labour movement and workers, often marked by parades, community events and a long weekend.",
+    "link": "https://en.wikipedia.org/wiki/Labour_Day"
+  },
+  {
+    "id": 31,
+    "region_id": 4,
+    "name": "Good Friday",
+    "description": "Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.",
+    "link": "https://en.wikipedia.org/wiki/Good_Friday"
+  },
+  {
+    "id": 32,
+    "region_id": 4,
+    "name": "Easter",
+    "description": "Easter is a Christian holiday celebrating the resurrection of Jesus Christ from the dead—marking the culmination of Holy Week—and is often observed with church services, festive meals, and traditions like egg hunts and chocolate bunnies.",
+    "link": "https://en.wikipedia.org/wiki/Easter"
+  },
+  {
+    "id": 33,
+    "region_id": 4,
+    "name": "Anzac Day",
+    "description": "Anzac Day is Australia’s and New Zealand’s national day of remembrance held each April 25 to honor the members of the Australian and New Zealand Army Corps—particularly those who served and died at Gallipoli in World War I—and all who have served in conflicts, typically marked by dawn services, marches, and wreath-laying ceremonies.",
+    "link": "https://en.wikipedia.org/wiki/Anzac_Day"
+  },
+  {
+    "id": 34,
+    "region_id": 4,
+    "name": "Western Australia Day",
+    "description": "Western Australia Day or simply WA Day is a public holiday in Western Australia, celebrated on the first Monday in June each year, to commemorate the founding of the Swan River Colony in 1829.",
+    "link": "https://en.wikipedia.org/wiki/Western_Australia_Day"
+  },
+  {
+    "id": 35,
+    "region_id": 4,
+    "name": "King’s Birthday",
+    "description": "In Western Australia, the King's Birthday public holiday is observed on a different date than in other Australian states, primarily to avoid a clash with the state's own holiday, Western Australia Day.",
+    "link": "https://en.wikipedia.org/wiki/King%27s_Official_Birthday"
+  },
+  {
+    "id": 36,
+    "region_id": 4,
+    "name": "Christmas Day",
+    "description": "Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.",
+    "link": "https://en.wikipedia.org/wiki/Christmas"
+  },
+  {
+    "id": 37,
+    "region_id": 4,
+    "name": "Boxing Day",
+    "description": "Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.",
+    "link": "https://en.wikipedia.org/wiki/Boxing_Day"
+  },
+  {
+    "id": 38,
+    "region_id": 5,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 39,
+    "region_id": 5,
+    "name": "Australia Day",
+    "description": "Australia Day is the official national day of Australia. Observed annually on 26 January, it marks the 1788 landing of the First Fleet and raising of the Union Flag of Great Britain by Arthur Phillip at Sydney Cove, a small bay on the southern shore of Sydney Harbour.",
+    "link": "https://en.wikipedia.org/wiki/Australia_Day"
+  },
+  {
+    "id": 40,
+    "region_id": 5,
+    "name": "Eight Hours Day",
+    "description": "Eight Hours Day is a public holiday in Tasmania held on the second Monday in March to commemorate the 1856 victory of Tasmanian stonemasons in securing an eight‑hour workday, typically celebrated with a long weekend and community events.",
+    "link": "https://en.wikipedia.org/wiki/Eight-hour_day_movement"
+  },
+  {
+    "id": 41,
+    "region_id": 5,
+    "name": "Good Friday",
+    "description": "Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.",
+    "link": "https://en.wikipedia.org/wiki/Good_Friday"
+  },
+  {
+    "id": 42,
+    "region_id": 5,
+    "name": "Easter",
+    "description": "Easter is a Christian holiday celebrating the resurrection of Jesus Christ from the dead—marking the culmination of Holy Week—and is often observed with church services, festive meals, and traditions like egg hunts and chocolate bunnies.",
+    "link": "https://en.wikipedia.org/wiki/Easter"
+  },
+  {
+    "id": 43,
+    "region_id": 5,
+    "name": "Anzac Day",
+    "description": "Anzac Day is Australia’s and New Zealand’s national day of remembrance held each April 25 to honor the members of the Australian and New Zealand Army Corps—particularly those who served and died at Gallipoli in World War I—and all who have served in conflicts, typically marked by dawn services, marches, and wreath-laying ceremonies.",
+    "link": "https://en.wikipedia.org/wiki/Anzac_Day"
+  },
+  {
+    "id": 44,
+    "region_id": 5,
+    "name": "King’s Birthday",
+    "description": "King’s Birthday is a public holiday in Australia celebrating the reigning monarch’s official birthday, observed on the second Monday in June in most states (with varying dates in Western Australia and Queensland) and marked by civic ceremonies, community events and the annual Birthday Honours.",
+    "link": "https://en.wikipedia.org/wiki/King%27s_Official_Birthday"
+  },
+  {
+    "id": 45,
+    "region_id": 5,
+    "name": "Christmas Day",
+    "description": "Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.",
+    "link": "https://en.wikipedia.org/wiki/Christmas"
+  },
+  {
+    "id": 46,
+    "region_id": 5,
+    "name": "Boxing Day",
+    "description": "Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.",
+    "link": "https://en.wikipedia.org/wiki/Boxing_Day"
+  },
+  {
+    "id": 47,
+    "region_id": 6,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 48,
+    "region_id": 6,
+    "name": "Australia Day",
+    "description": "Australia Day is the official national day of Australia. Observed annually on 26 January, it marks the 1788 landing of the First Fleet and raising of the Union Flag of Great Britain by Arthur Phillip at Sydney Cove, a small bay on the southern shore of Sydney Harbour.",
+    "link": "https://en.wikipedia.org/wiki/Australia_Day"
+  },
+  {
+    "id": 49,
+    "region_id": 6,
+    "name": "Good Friday",
+    "description": "Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.",
+    "link": "https://en.wikipedia.org/wiki/Good_Friday"
+  },
+  {
+    "id": 50,
+    "region_id": 6,
+    "name": "Easter",
+    "description": "Easter is a Christian holiday celebrating the resurrection of Jesus Christ from the dead—marking the culmination of Holy Week—and is often observed with church services, festive meals, and traditions like egg hunts and chocolate bunnies.",
+    "link": "https://en.wikipedia.org/wiki/Easter"
+  },
+  {
+    "id": 51,
+    "region_id": 6,
+    "name": "Anzac Day",
+    "description": "Anzac Day is Australia’s and New Zealand’s national day of remembrance held each April 25 to honor the members of the Australian and New Zealand Army Corps—particularly those who served and died at Gallipoli in World War I—and all who have served in conflicts, typically marked by dawn services, marches, and wreath-laying ceremonies.",
+    "link": "https://en.wikipedia.org/wiki/Anzac_Day"
+  },
+  {
+    "id": 52,
+    "region_id": 6,
+    "name": "May Day",
+    "description": "May Day in the Northern Territory is a public holiday held on the first Monday in May to honor the labour movement’s achievement of the eight‑hour workday, typically celebrated with a long weekend and community events.",
+    "link": "https://en.wikipedia.org/wiki/Labour_Day"
+  },
+  {
+    "id": 53,
+    "region_id": 6,
+    "name": "King’s Birthday",
+    "description": "King’s Birthday is a public holiday in Australia celebrating the reigning monarch’s official birthday, observed on the second Monday in June in most states (with varying dates in Western Australia and Queensland) and marked by civic ceremonies, community events and the annual Birthday Honours.",
+    "link": "https://en.wikipedia.org/wiki/King%27s_Official_Birthday"
+  },
+  {
+    "id": 54,
+    "region_id": 6,
+    "name": "Picnic Day",
+    "description": "Picnic Day is a public holiday in the Northern Territory of Australia which takes place every year on the first Monday of August.",
+    "link": "https://en.wikipedia.org/wiki/Picnic_Day_(Australian_holiday)"
+  },
+  {
+    "id": 55,
+    "region_id": 6,
+    "name": "Christmas Day",
+    "description": "Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.",
+    "link": "https://en.wikipedia.org/wiki/Christmas"
+  },
+  {
+    "id": 56,
+    "region_id": 6,
+    "name": "Boxing Day",
+    "description": "Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.",
+    "link": "https://en.wikipedia.org/wiki/Boxing_Day"
+  },
+  {
+    "id": 57,
+    "region_id": 7,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 58,
+    "region_id": 7,
+    "name": "Australia Day",
+    "description": "Australia Day is the official national day of Australia. Observed annually on 26 January, it marks the 1788 landing of the First Fleet and raising of the Union Flag of Great Britain by Arthur Phillip at Sydney Cove, a small bay on the southern shore of Sydney Harbour.",
+    "link": "https://en.wikipedia.org/wiki/Australia_Day"
+  },
+  {
+    "id": 59,
+    "region_id": 7,
+    "name": "Labour Day",
+    "description": "Labour Day is a public holiday observed on varying dates across Australian states and territories to honor the achievements of the labour movement and workers, often marked by parades, community events and a long weekend.",
+    "link": "https://en.wikipedia.org/wiki/Labour_Day"
+  },
+  {
+    "id": 60,
+    "region_id": 7,
+    "name": "Good Friday",
+    "description": "Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.",
+    "link": "https://en.wikipedia.org/wiki/Good_Friday"
+  },
+  {
+    "id": 61,
+    "region_id": 7,
+    "name": "Easter",
+    "description": "Easter is a Christian holiday celebrating the resurrection of Jesus Christ from the dead—marking the culmination of Holy Week—and is often observed with church services, festive meals, and traditions like egg hunts and chocolate bunnies.",
+    "link": "https://en.wikipedia.org/wiki/Easter"
+  },
+  {
+    "id": 62,
+    "region_id": 7,
+    "name": "Anzac Day",
+    "description": "Anzac Day is Australia’s and New Zealand’s national day of remembrance held each April 25 to honor the members of the Australian and New Zealand Army Corps—particularly those who served and died at Gallipoli in World War I—and all who have served in conflicts, typically marked by dawn services, marches, and wreath-laying ceremonies.",
+    "link": "https://en.wikipedia.org/wiki/Anzac_Day"
+  },
+  {
+    "id": 63,
+    "region_id": 7,
+    "name": "King’s Birthday",
+    "description": "King’s Birthday is a public holiday in Australia celebrating the reigning monarch’s official birthday, observed on the second Monday in June in most states (with varying dates in Western Australia and Queensland) and marked by civic ceremonies, community events and the annual Birthday Honours.",
+    "link": "https://en.wikipedia.org/wiki/King%27s_Official_Birthday"
+  },
+  {
+    "id": 64,
+    "region_id": 7,
+    "name": "Friday before the AFL Grand Final",
+    "description": "The AFL Grand Final is an Australian rules football match to determine the premiers for the Australian Football League (AFL) season.",
+    "link": "https://en.wikipedia.org/wiki/AFL_Grand_Final"
+  },
+  {
+    "id": 65,
+    "region_id": 7,
+    "name": "Melbourne Cup",
+    "description": "The Melbourne Cup is an annual Group 1 Thoroughbred horse race held in Melbourne, Australia, at the Flemington Racecourse.",
+    "link": "https://en.wikipedia.org/wiki/Melbourne_Cup"
+  },
+  {
+    "id": 66,
+    "region_id": 7,
+    "name": "Christmas Day",
+    "description": "Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.",
+    "link": "https://en.wikipedia.org/wiki/Christmas"
+  },
+  {
+    "id": 67,
+    "region_id": 7,
+    "name": "Boxing Day",
+    "description": "Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.",
+    "link": "https://en.wikipedia.org/wiki/Boxing_Day"
+  },
+  {
+    "id": 68,
+    "region_id": 8,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 69,
+    "region_id": 8,
+    "name": "Australia Day",
+    "description": "Australia Day is the official national day of Australia. Observed annually on 26 January, it marks the 1788 landing of the First Fleet and raising of the Union Flag of Great Britain by Arthur Phillip at Sydney Cove, a small bay on the southern shore of Sydney Harbour.",
+    "link": "https://en.wikipedia.org/wiki/Australia_Day"
+  },
+  {
+    "id": 70,
+    "region_id": 8,
+    "name": "Good Friday",
+    "description": "Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.",
+    "link": "https://en.wikipedia.org/wiki/Good_Friday"
+  },
+  {
+    "id": 71,
+    "region_id": 8,
+    "name": "Easter",
+    "description": "Easter is a Christian holiday celebrating the resurrection of Jesus Christ from the dead—marking the culmination of Holy Week—and is often observed with church services, festive meals, and traditions like egg hunts and chocolate bunnies.",
+    "link": "https://en.wikipedia.org/wiki/Easter"
+  },
+  {
+    "id": 72,
+    "region_id": 8,
+    "name": "Anzac Day",
+    "description": "Anzac Day is Australia’s and New Zealand’s national day of remembrance held each April 25 to honor the members of the Australian and New Zealand Army Corps—particularly those who served and died at Gallipoli in World War I—and all who have served in conflicts, typically marked by dawn services, marches, and wreath-laying ceremonies.",
+    "link": "https://en.wikipedia.org/wiki/Anzac_Day"
+  },
+  {
+    "id": 73,
+    "region_id": 8,
+    "name": "Labour Day",
+    "description": "Labour Day is a public holiday observed on varying dates across Australian states and territories to honor the achievements of the labour movement and workers, often marked by parades, community events and a long weekend.",
+    "link": "https://en.wikipedia.org/wiki/Labour_Day"
+  },
+  {
+    "id": 74,
+    "region_id": 8,
+    "name": "Royal Queensland Show (Brisbane area only)",
+    "description": "The Ekka is the annual agricultural show of Queensland, Australia. Its formal title is the Royal Queensland Show, and it is held at the Brisbane Showgrounds.",
+    "link": "https://en.wikipedia.org/wiki/Ekka"
+  },
+  {
+    "id": 75,
+    "region_id": 8,
+    "name": "King’s Birthday",
+    "description": "King’s Birthday is a public holiday in Australia celebrating the reigning monarch’s official birthday, observed on the second Monday in June in most states (with varying dates in Western Australia and Queensland) and marked by civic ceremonies, community events and the annual Birthday Honours.",
+    "link": "https://en.wikipedia.org/wiki/King%27s_Official_Birthday"
+  },
+  {
+    "id": 76,
+    "region_id": 8,
+    "name": "Christmas Day",
+    "description": "Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.",
+    "link": "https://en.wikipedia.org/wiki/Christmas"
+  },
+  {
+    "id": 77,
+    "region_id": 8,
+    "name": "Boxing Day",
+    "description": "Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.",
+    "link": "https://en.wikipedia.org/wiki/Boxing_Day"
+  },
+  {
+    "id": 78,
+    "region_id": 9,
+    "name": "New Year's Day",
+    "description": "In the Gregorian calendar, New Year's Day is the first day of the calendar year, 1 January. Most solar calendars, such as the Gregorian and Julian calendars, begin the year regularly at or near the northern winter solstice.",
+    "link": "https://en.wikipedia.org/wiki/New_Year's_Day"
+  },
+  {
+    "id": 79,
+    "region_id": 9,
+    "name": "Australia Day",
+    "description": "Australia Day is the official national day of Australia. Observed annually on 26 January, it marks the 1788 landing of the First Fleet and raising of the Union Flag of Great Britain by Arthur Phillip at Sydney Cove, a small bay on the southern shore of Sydney Harbour.",
+    "link": "https://en.wikipedia.org/wiki/Australia_Day"
+  },
+  {
+    "id": 80,
+    "region_id": 9,
+    "name": "Canberra Day",
+    "description": "Canberra Day is a public holiday in Australia held annually on the second Monday in March in the Australian Capital Territory and the Jervis Bay Territory to celebrate the official naming of Canberra.",
+    "link": "https://en.wikipedia.org/wiki/Canberra_Day"
+  },
+  {
+    "id": 81,
+    "region_id": 9,
+    "name": "Good Friday",
+    "description": "Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.",
+    "link": "https://en.wikipedia.org/wiki/Good_Friday"
+  },
+  {
+    "id": 82,
+    "region_id": 9,
+    "name": "Easter",
+    "description": "Easter is a Christian holiday celebrating the resurrection of Jesus Christ from the dead—marking the culmination of Holy Week—and is often observed with church services, festive meals, and traditions like egg hunts and chocolate bunnies.",
+    "link": "https://en.wikipedia.org/wiki/Easter"
+  },
+  {
+    "id": 83,
+    "region_id": 9,
+    "name": "Anzac Day",
+    "description": "Anzac Day is Australia’s and New Zealand’s national day of remembrance held each April 25 to honor the members of the Australian and New Zealand Army Corps—particularly those who served and died at Gallipoli in World War I—and all who have served in conflicts, typically marked by dawn services, marches, and wreath-laying ceremonies.",
+    "link": "https://en.wikipedia.org/wiki/Anzac_Day"
+  },
+  {
+    "id": 84,
+    "region_id": 9,
+    "name": "Reconciliation Day",
+    "description": "Reconciliation Day is a public holiday in the Australian Capital Territory (ACT). First observed in 2018, it celebrates Aboriginal Australian culture and promotes cultural exchange and understanding.",
+    "link": "https://www.anu.edu.au/students/student-life/events-stories/reconciliation-day-public-holiday"
+  },
+  {
+    "id": 85,
+    "region_id": 9,
+    "name": "King’s Birthday",
+    "description": "King’s Birthday is a public holiday in Australia celebrating the reigning monarch’s official birthday, observed on the second Monday in June in most states (with varying dates in Western Australia and Queensland) and marked by civic ceremonies, community events and the annual Birthday Honours.",
+    "link": "https://en.wikipedia.org/wiki/King%27s_Official_Birthday"
+  },
+  {
+    "id": 86,
+    "region_id": 9,
+    "name": "Labour Day",
+    "description": "Labour Day is a public holiday observed on varying dates across Australian states and territories to honor the achievements of the labour movement and workers, often marked by parades, community events and a long weekend.",
+    "link": "https://en.wikipedia.org/wiki/Labour_Day"
+  },
+  {
+    "id": 87,
+    "region_id": 9,
+    "name": "Christmas Day",
+    "description": "Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.",
+    "link": "https://en.wikipedia.org/wiki/Christmas"
+  },
+  {
+    "id": 88,
+    "region_id": 9,
+    "name": "Boxing Day",
+    "description": "Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.",
+    "link": "https://en.wikipedia.org/wiki/Boxing_Day"
+  }
+]

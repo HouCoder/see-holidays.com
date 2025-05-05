@@ -1,0 +1,101 @@
+import { useHolidaysStore } from '@/stores/useHolidaysStore';
+import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import FullCalendar from '@fullcalendar/react';
+import { parseAsBoolean, useQueryState } from 'nuqs';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
+const MOBILE_BREAKPOINT = 992; // BS Large size
+
+const Calendar = () => {
+  const [showDialog, setShowDialog] = useState(false);
+  const holidays = useHolidaysStore((state) => state.holidays);
+  const holidayThemes = useHolidaysStore((state) => state.holidayThemes);
+  const setSelectedEvent = useSelectedEventStore(
+    (state) => state.setSelectedEvent,
+  );
+  const selectedEvent = useSelectedEventStore((state) => state.selectedEvent);
+
+  const [showWeekNumbers] = useQueryState(
+    'show-week-numbers',
+    parseAsBoolean.withDefault(false),
+  );
+  const [sundayFirstDay] = useQueryState(
+    'sunday-first-day',
+    parseAsBoolean.withDefault(false),
+  );
+
+  return (
+    <>
+      <Modal show={showDialog} onHide={() => setShowDialog(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>
+            {selectedEvent.extendedProps?.flag}{' '}
+            {selectedEvent.extendedProps?.regionName} / {selectedEvent.title}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {selectedEvent.extendedProps?.description ||
+            'No description for this holiday'}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            className="w-100"
+            variant="secondary"
+            onClick={() => setShowDialog(false)}
+          >
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <FullCalendar
+        plugins={[dayGridPlugin]}
+        weekNumbers={showWeekNumbers}
+        dayMaxEventRows={3}
+        themeSystem="bootstrap5"
+        initialView="dayGridMonth"
+        firstDay={sundayFirstDay ? 0 : 1}
+        events={holidays}
+        eventOrder={(a, b) => holidays.indexOf(a) - holidays.indexOf(b)}
+        eventOrderStrict
+        eventContent={({ event }) => {
+          const html = `
+            <div class="fc-event-main-frame">
+              <div class="fc-event-title-container">
+                <div class="fc-event-title fc-sticky" title="${event.title} - ${event.extendedProps.regionName}">
+                  ${event.extendedProps.flag} ${event.title}
+                </div>
+              </div>
+            </div>`;
+
+          return {
+            html,
+          };
+        }}
+        eventClick={({ event }) => {
+          setSelectedEvent(event);
+
+          const isMobile = window.screen.width < MOBILE_BREAKPOINT;
+
+          if (isMobile) {
+            setShowDialog(true);
+          }
+        }}
+        eventClassNames={({ event }) => {
+          const { regionId } = event.extendedProps;
+          const themeColor = holidayThemes[regionId];
+
+          if (!themeColor) {
+            return 'px-1';
+          }
+
+          return `fc-event--${themeColor} px-1`;
+        }}
+      />
+    </>
+  );
+};
+
+export default Calendar;

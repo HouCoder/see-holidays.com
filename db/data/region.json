@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "China", "country_id": 1 },
+  { "id": 2, "name": "South Australia", "country_id": 2 },
+  { "id": 3, "name": "New South Wales", "country_id": 2 },
+  { "id": 4, "name": "Western Australia", "country_id": 2 },
+  { "id": 5, "name": "Tasmania", "country_id": 2 },
+  { "id": 6, "name": "Northern Territory", "country_id": 2 },
+  { "id": 7, "name": "Victoria", "country_id": 2 },
+  { "id": 8, "name": "Queensland", "country_id": 2 },
+  { "id": 9, "name": "Australian Capital Territory", "country_id": 2 }
+]
