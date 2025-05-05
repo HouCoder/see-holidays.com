@@ -1,0 +1,40 @@
+@use 'sass:list';
+@use '@/styles/settings.scss' as *;
+
+.region-select {
+  :global(.react-select__menu) {
+    z-index: 2 !important;
+  }
+
+  :global(.react-select__group) {
+    :global(.react-select__option) {
+      padding-left: 2rem;
+    }
+  }
+
+  :global(.react-select__control) {
+    border-color: var(--bs-border-color) !important;
+    border-radius: var(--bs-border-radius) !important;
+  }
+
+  $index: 1; // Initialize the index variable
+
+  @each $color in $eventOptionColorsList {
+    :global(.react-select__multi-value:nth-child(#{$index})) {
+      background-color: list.nth($eventOptionColorsList, $index) !important;
+    }
+
+    $index: $index + 1;
+  }
+
+  :global(.react-select__group-heading) {
+    font-size: 100% !important;
+  }
+
+  :global(.form-switch),
+  :global(.form-check-input),
+  :global(.form-check-label) {
+    cursor: pointer;
+    user-select: none;
+  }
+}

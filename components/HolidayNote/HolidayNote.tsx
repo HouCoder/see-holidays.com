@@ -1,6 +1,6 @@
 import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
 
-export const HolidayNote = () => {
+const HolidayNote = () => {
   const selectedEvent = useSelectedEventStore((state) => state.selectedEvent);
   const extendedProps = selectedEvent.extendedProps || {};
 
@@ -25,3 +25,5 @@ export const HolidayNote = () => {
     </div>
   );
 };
+
+export default HolidayNote;

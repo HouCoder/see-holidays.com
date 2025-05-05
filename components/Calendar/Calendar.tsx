@@ -6,6 +6,7 @@ import { parseAsBoolean, useQueryState } from 'nuqs';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import styles from './styles.module.scss';
 
 const MOBILE_BREAKPOINT = 992; // BS Large size
 
@@ -28,7 +29,7 @@ const Calendar = () => {
   );
 
   return (
-    <>
+    <div className={styles.calendar}>
       <Modal show={showDialog} onHide={() => setShowDialog(false)}>
         <Modal.Header closeButton>
           <Modal.Title>
@@ -94,7 +95,7 @@ const Calendar = () => {
           return `fc-event--${themeColor} px-1`;
         }}
       />
-    </>
+    </div>
   );
 };
 

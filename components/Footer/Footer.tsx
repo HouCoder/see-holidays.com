@@ -4,9 +4,9 @@ const Footer = () => {
 	const year = new Date().getFullYear();
 
 	return (
-    <footer className="border-top">
+    <footer className="border-top mt-6">
       <Container>
-        <div className="d-flex flex-wrap justify-content-between py-3 mt-6 text-body-tertiary fst-italic">
+        <div className="d-flex flex-wrap justify-content-between py-3 text-body-tertiary fst-italic">
           <div>© {year} See Holidays. All rights reserved.</div>
           <div>
             Made with ❤️ by{" "}

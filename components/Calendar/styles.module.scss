@@ -1,0 +1,90 @@
+@use 'sass:list';
+@use '@/styles/settings.scss' as *;
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.calendar {
+  // Full Calendar
+  :global(.fc-media-screen) {
+    height: 800px;
+  }
+
+  :global(.fc-header-toolbar) {
+    margin-bottom: 0.5rem !important;
+  }
+
+  // Keep the title font size consistent with bootstrap's h3
+  :global(.fc-toolbar-title) {
+    font-size: 1.75rem;
+
+    @include media-breakpoint-down(xl) {
+      font-size: calc(1.3rem + .6vw);
+    }
+  }
+
+  :global(.fc-today-button) {
+    text-transform: capitalize !important;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  :global(.fc-col-header-cell-cushion) {
+    padding: 10px 0 !important;
+  }
+
+  :global(.fc-view.fc-daygrid) {
+    border: 1px solid var(--fc-border-color);
+    border-radius: var(--bs-border-radius);
+  }
+
+  :global(.fc-col-header-cell-cushion),
+  :global(.fc-daygrid-day-number) {
+    color: var(--bs-body-color);
+  }
+
+  :global(.fc-scrollgrid.fc-scrollgrid-liquid) {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-style: hidden;
+  }
+
+  :global(.fc-daygrid-day-number) {
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  :global(.fc-day-other) {
+    :global(.fc-daygrid-day-number) {
+      font-weight: normal;
+    }
+  }
+
+  :global(.fc-event-selected::after),
+  :global(.fc-event:focus::after) {
+    display: none;
+  }
+
+  @each $name, $color in $eventOptionColorsMap {
+    :global(.fc-event--#{$name}) {
+      border-color: $color !important;
+      background-color: $color !important;
+    }
+  }
+
+  :global(.fc-daygrid-event-harness) {
+    cursor: pointer;
+  }
+
+  :global(.fc-event-title) {
+    text-overflow: ellipsis;
+    color: hsl(0, 0%, 20%) !important;
+  }
+
+  :global(.fc-daygrid-day-events) {
+    min-height: 5em !important;
+    margin-bottom: 0.5em !important;
+  }
+}

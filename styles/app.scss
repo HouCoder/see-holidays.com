@@ -1,0 +1,32 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+// https://developer.apple.com/design/human-interface-guidelines/color#visionOS-system-colors
+:root {
+  --event-color-red: rgb(255, 69, 58);
+  --event-color-orange: rgb(255, 159, 10);
+  --event-color-yellow: rgb(255, 214, 10);
+  --event-color-green: rgb(50, 215, 75);
+  --event-color-mint: rgb(102, 212, 207);
+  --event-color-teal: rgb(106, 196, 220);
+  --event-color-cyan: rgb(90, 200, 245);
+  --event-color-blue: rgb(10, 132, 255);
+  --event-color-indigo: rgb(94, 92, 230);
+  --event-color-purple: rgb(191, 90, 242);
+  --event-color-pink: rgb(255, 55, 95);
+  --event-color-brown: rgb(172, 142, 104);
+  --event-color-gray: rgb(152, 152, 157);
+}
+
+// Bootstrap
+a {
+  text-decoration: none;
+}
+
+// Utility classes
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.mb-6 {
+  margin-bottom: 6rem;
+}

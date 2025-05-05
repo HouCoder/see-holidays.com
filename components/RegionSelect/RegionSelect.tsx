@@ -11,6 +11,7 @@ import { parseAsArrayOf, parseAsBoolean, useQueryState } from 'nuqs';
 import { useEffect } from 'react';
 import FormCheck from 'react-bootstrap/FormCheck';
 import Select, { components } from 'react-select';
+import styles from './styles.module.scss';
 
 const MultiValueLabel = (props) => {
   const countryDetail = getCountryByRegionId(props.data.value);
@@ -54,8 +55,10 @@ const RegionSelect = () => {
     setHolidayThemes(initialThemes);
   }, []);
 
+  console.log(styles);
+
   return (
-    <>
+    <div className={styles['region-select']}>
       <h3 className="mb-3">Settings</h3>
       <Select
         isMulti
@@ -108,7 +111,7 @@ const RegionSelect = () => {
           setShowWeekNumbers(checked);
         }}
       />
-    </>
+    </div>
   );
 };
 

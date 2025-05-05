@@ -1,0 +1,30 @@
+$eventOptionColorsList:
+  var(--event-color-red),
+  var(--event-color-orange),
+  var(--event-color-yellow),
+  var(--event-color-green),
+  var(--event-color-mint),
+  var(--event-color-teal),
+  var(--event-color-cyan),
+  var(--event-color-blue),
+  var(--event-color-indigo),
+  var(--event-color-purple),
+  var(--event-color-pink),
+  var(--event-color-brown),
+  var(--event-color-gray);
+
+$eventOptionColorsMap: (
+  "red": var(--event-color-red),
+  "orange": var(--event-color-orange),
+  "yellow": var(--event-color-yellow),
+  "green": var(--event-color-green),
+  "mint": var(--event-color-mint),
+  "teal": var(--event-color-teal),
+  "cyan": var(--event-color-cyan),
+  "blue": var(--event-color-blue),
+  "indigo": var(--event-color-indigo),
+  "purple": var(--event-color-purple),
+  "pink": var(--event-color-pink),
+  "brown": var(--event-color-brown),
+  "gray": var(--event-color-gray)
+);
