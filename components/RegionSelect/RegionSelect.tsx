@@ -28,6 +28,7 @@ const MultiValueLabel = (props: MultiValueLabelProps) => {
   return <components.MultiValueLabel {...newProps} />;
 };
 
+// https://github.com/JedWatson/react-select/pull/5972
 const RegionSelect = () => {
   const setHolidays = useHolidaysStore((state) => state.setHolidays);
   const setHolidayThemes = useHolidaysStore((state) => state.setHolidayThemes);
