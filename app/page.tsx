@@ -1,12 +1,11 @@
 'use client';
 
+import Calendar from '@/components/Calendar/Calendar';
+import HolidaysInYear from '@/components/HolidaysInYear/HolidaysInYear';
+import RegionSelect from '@/components/RegionSelect/RegionSelect';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import RegionSelect from "@/components/RegionSelect/RegionSelect";
-import HolidaysInYear from "@/components/HolidaysInYear/HolidaysInYear";
-import Calendar from "@/components/Calendar/Calendar";
-import HolidayNote from "@/components/HolidayNote/HolidayNote";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
         <Col className="col-lg-3 col-12">
           <RegionSelect />
           <HolidaysInYear />
-          <HolidayNote />
         </Col>
         <Col className="col-lg-9 col-12">
           <Calendar />

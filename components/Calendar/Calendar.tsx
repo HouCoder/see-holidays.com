@@ -1,3 +1,4 @@
+import type { Holiday } from '@/db/db';
 import { useHolidaysStore } from '@/stores/useHolidaysStore';
 import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -7,8 +8,6 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import styles from './styles.module.scss';
-
-const MOBILE_BREAKPOINT = 992; // BS Large size
 
 const Calendar = () => {
   const [showDialog, setShowDialog] = useState(false);
@@ -33,13 +32,26 @@ const Calendar = () => {
       <Modal show={showDialog} onHide={() => setShowDialog(false)}>
         <Modal.Header closeButton>
           <Modal.Title>
-            {selectedEvent.extendedProps?.flag}{' '}
-            {selectedEvent.extendedProps?.regionName} / {selectedEvent.title}
+            {selectedEvent?.extendedProps?.flag}{' '}
+            {selectedEvent?.extendedProps?.regionName} / {selectedEvent?.title}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {selectedEvent.extendedProps?.description ||
+          {selectedEvent?.extendedProps?.description ||
             'No description for this holiday'}
+
+          {selectedEvent?.extendedProps?.link ? (
+            <div className="mt-2">
+              <a
+                href={selectedEvent?.extendedProps?.link}
+                className="fst-italic"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Learn more about this holiday
+              </a>
+            </div>
+          ) : null}
         </Modal.Body>
         <Modal.Footer>
           <Button
@@ -59,7 +71,9 @@ const Calendar = () => {
         initialView="dayGridMonth"
         firstDay={sundayFirstDay ? 0 : 1}
         events={holidays}
-        eventOrder={(a, b) => holidays.indexOf(a) - holidays.indexOf(b)}
+        eventOrder={(a, b) =>
+          holidays.indexOf(a as Holiday) - holidays.indexOf(b as Holiday)
+        }
         eventOrderStrict
         eventContent={({ event }) => {
           const html = `
@@ -77,12 +91,7 @@ const Calendar = () => {
         }}
         eventClick={({ event }) => {
           setSelectedEvent(event);
-
-          const isMobile = window.screen.width < MOBILE_BREAKPOINT;
-
-          if (isMobile) {
-            setShowDialog(true);
-          }
+          setShowDialog(true);
         }}
         eventClassNames={({ event }) => {
           const { regionId } = event.extendedProps;

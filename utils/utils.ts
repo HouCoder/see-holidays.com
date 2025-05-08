@@ -13,9 +13,8 @@ export const removeEmoji = (text: string) =>
 
 export const selectOptions = getSelectOptions();
 
-const flattenedRegionsWithNoEmoji = flatMap(
-  selectOptions,
-  (item) => item.options || item,
+const flattenedRegionsWithNoEmoji = flatMap(selectOptions, (item) =>
+  'options' in item ? item.options : item,
 ).map((region) => ({
   label: removeEmoji(region.label),
   value: region.value,
@@ -26,6 +25,6 @@ export const parseAsRegion = createParser({
     return flattenedRegionsWithNoEmoji.find((region) => region.label === query);
   },
   serialize(value) {
-    return removeEmoji(value.label);
+    return removeEmoji(value?.label || '');
   },
 });

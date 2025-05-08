@@ -1,23 +1,28 @@
-import { getCountryByRegionId, getHolidaysByRegionId } from '@/db/db';
-import { useHolidaysStore } from '@/stores/useHolidaysStore';
-import {
-  parseAsRegion,
-  removeEmoji,
-  selectOptions,
-} from '@/utils/utils';
 import { REGION_COLORS } from '@/configs/constants';
+import type { Holiday } from '@/db/db';
+import { getCountryByRegionId, getHolidaysByRegionId } from '@/db/db';
+import { type HolidayTheme, useHolidaysStore } from '@/stores/useHolidaysStore';
+import { parseAsRegion, removeEmoji, selectOptions } from '@/utils/utils';
 
 import { parseAsArrayOf, parseAsBoolean, useQueryState } from 'nuqs';
 import { useEffect } from 'react';
 import FormCheck from 'react-bootstrap/FormCheck';
-import Select, { components } from 'react-select';
+import Select, { components, type MultiValueGenericProps } from 'react-select';
 import styles from './styles.module.scss';
 
-const MultiValueLabel = (props) => {
+// biome-ignore lint/suspicious/noExplicitAny: intentionally using any
+interface MultiValueLabelProps extends MultiValueGenericProps<any> {
+  data: {
+    value: number;
+  };
+  children: React.ReactNode;
+}
+
+const MultiValueLabel = (props: MultiValueLabelProps) => {
   const countryDetail = getCountryByRegionId(props.data.value);
   const newProps = {
     ...props,
-    children: `${countryDetail.flag} ${removeEmoji(props.children)}`,
+    children: `${countryDetail?.flag} ${removeEmoji(props.children as string)}`,
   };
 
   return <components.MultiValueLabel {...newProps} />;
@@ -41,10 +46,14 @@ const RegionSelect = () => {
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: This effect should only run once
   useEffect(() => {
-    const initialHolidays = [];
-    const initialThemes = {};
+    const initialHolidays: Holiday[] = [];
+    const initialThemes: HolidayTheme = {};
 
     queryRegions.forEach((region, index) => {
+      if (!region) {
+        return;
+      }
+
       initialThemes[region.value] = REGION_COLORS[index];
       const events = getHolidaysByRegionId(region.value);
 
@@ -54,8 +63,6 @@ const RegionSelect = () => {
     setHolidays(initialHolidays);
     setHolidayThemes(initialThemes);
   }, []);
-
-  console.log(styles);
 
   return (
     <div className={styles['region-select']}>
@@ -68,13 +75,14 @@ const RegionSelect = () => {
         classNamePrefix="react-select"
         placeholder="Select regions"
         onChange={(regions) => {
-          console.log(regions);
-          const regionsWithoutEmoji = regions.map((region) => ({
-            label: removeEmoji(region.label),
-            value: region.value,
-          }));
-          const calendarEvents = [];
-          const themes = {};
+          const regionsWithoutEmoji = regions
+            .filter((r) => r !== undefined)
+            .map((region) => ({
+              label: removeEmoji(region.label),
+              value: region.value,
+            }));
+          const calendarEvents: Holiday[] = [];
+          const themes: HolidayTheme = {};
 
           setQueryRegions(regionsWithoutEmoji);
 

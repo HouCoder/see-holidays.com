@@ -11,19 +11,20 @@ const HolidaysInYear = () => {
     'regions',
     parseAsArrayOf(parseAsRegion).withDefault([]),
   );
+  const validRegions = queryRegions.filter((r) => r !== undefined);
 
-  if (queryRegions.length === 0) {
+  if (validRegions.length === 0) {
     return null;
   }
 
   return (
     <div className="holidays-in-year d-none d-lg-block">
       <h3 className="mb-3">Public Holidays in {currentYear}</h3>
-      <Accordion defaultActiveKey={queryRegions[0].value}>
-        {queryRegions.map((region) => (
-          <Accordion.Item key={region.value} eventKey={region.value}>
+      <Accordion defaultActiveKey={String(validRegions[0].value)}>
+        {validRegions.map((region) => (
+          <Accordion.Item key={region.value} eventKey={String(region.value)}>
             <Accordion.Header>
-              {getCountryByRegionId(region.value).flag} {region.label}
+              {getCountryByRegionId(region.value)?.flag} {region.label}
             </Accordion.Header>
             <Accordion.Body>
               <ul className="ps-3 m-0">
@@ -31,7 +32,7 @@ const HolidaysInYear = () => {
                   .filter(
                     (holiday) =>
                       holiday.regionId === region.value &&
-                      holiday.start.startsWith(currentYear),
+                      holiday.start.startsWith(String(currentYear)),
                   )
                   .map((holiday) => (
                     <li key={holiday.start}>

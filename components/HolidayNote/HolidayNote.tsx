@@ -1,7 +1,19 @@
 import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-const HolidayNote = () => {
+type Props = {
+  show: boolean;
+  setShow: (show: boolean) => void;
+};
+
+const HolidayNote = ({ show, setShow }: Props) => {
   const selectedEvent = useSelectedEventStore((state) => state.selectedEvent);
+
+  if (!selectedEvent) {
+    return null;
+  }
+
   const extendedProps = selectedEvent.extendedProps || {};
 
   if (!extendedProps.description) {
@@ -9,20 +21,27 @@ const HolidayNote = () => {
   }
 
   return (
-    <div className="holiday-note">
-      <h3 className="my-3">Holiday Note</h3>
-      <div className="mb-1">{extendedProps.description}</div>
-      {extendedProps.link && (
-        <a
-          href={extendedProps.link}
-          className="fst-italic"
-          target="_blank"
-          rel="noreferrer"
+    <Modal show={show} onHide={() => setShow(false)}>
+      <Modal.Header closeButton>
+        <Modal.Title>
+          {selectedEvent.extendedProps?.flag}{' '}
+          {selectedEvent.extendedProps?.regionName} / {selectedEvent.title}
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {selectedEvent.extendedProps?.description ||
+          'No description for this holiday'}
+      </Modal.Body>
+      <Modal.Footer>
+        <Button
+          className="w-100"
+          variant="secondary"
+          onClick={() => setShow(false)}
         >
-          Learn more about this holiday
-        </a>
-      )}
-    </div>
+          Close
+        </Button>
+      </Modal.Footer>
+    </Modal>
   );
 };
 

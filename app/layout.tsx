@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import Footer from '@/components/Footer/Footer';
+import Header from '@/components/Header/Header';
+import type { Metadata } from 'next';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import "@/styles/app.scss";
+import '@/styles/app.scss';
 
 export const metadata: Metadata = {
-  title: "SeeHolidays – Interactive Holiday Calendar",
-  description: "Discover public, bank & regional holidays worldwide with SeeHolidays.com. Browse by country or state, export to your calendar, plan vacations & never miss a celebration!",
+  title: 'SeeHolidays – Interactive Holiday Calendar',
+  description:
+    'Discover public & regional holidays worldwide with SeeHolidays.com. Browse by country or state, plan work and vacations, never miss a celebration!',
 };
 
 export default function RootLayout({
@@ -18,9 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <NuqsAdapter>
-          {children}
-        </NuqsAdapter>
+        <NuqsAdapter>{children}</NuqsAdapter>
         <Footer />
       </body>
     </html>
