@@ -1,3 +1,4 @@
+'use client';
 import { getCountryByRegionId } from '@/db/db';
 import { useHolidaysStore } from '@/stores/useHolidaysStore';
 import { parseAsRegion } from '@/utils/utils';

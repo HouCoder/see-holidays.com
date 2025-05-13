@@ -1,3 +1,5 @@
+'use client';
+
 import type { Holiday } from '@/db/db';
 import { useHolidaysStore } from '@/stores/useHolidaysStore';
 import { useSelectedEventStore } from '@/stores/useSelectedEventStore';

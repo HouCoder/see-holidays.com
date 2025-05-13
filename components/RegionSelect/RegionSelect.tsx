@@ -1,3 +1,5 @@
+'use client';
+
 import { REGION_COLORS } from '@/configs/constants';
 import type { Holiday } from '@/db/db';
 import { getCountryByRegionId, getHolidaysByRegionId } from '@/db/db';
@@ -67,7 +69,7 @@ const RegionSelect = () => {
 
   return (
     <div className={styles['region-select']}>
-      <h3 className="mb-3">Settings</h3>
+      <h3 className="mb-3">Select Regions</h3>
       <Select
         isMulti
         options={selectOptions}

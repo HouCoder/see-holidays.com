@@ -1,5 +1,3 @@
-'use client';
-
 import Calendar from '@/components/Calendar/Calendar';
 import { Suspense } from 'react';
 import HolidaysInYear from '@/components/HolidaysInYear/HolidaysInYear';
