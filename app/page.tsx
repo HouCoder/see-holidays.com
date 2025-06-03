@@ -1,7 +1,7 @@
 import Calendar from '@/components/Calendar/Calendar';
-import { Suspense } from 'react';
 import HolidaysInYear from '@/components/HolidaysInYear/HolidaysInYear';
 import RegionSelect from '@/components/RegionSelect/RegionSelect';
+import { Suspense } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
