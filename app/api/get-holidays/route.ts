@@ -75,6 +75,7 @@ export async function GET(request: NextRequest) {
     .where(inArray(region.id, regionIds))
     .orderBy(desc(date.startDate))
     .all();
+
   const processedResult = dbResult.map((row) => ({
     ...row,
     isWorkingDay: Boolean(row.isWorkingDay),

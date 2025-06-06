@@ -4,7 +4,7 @@ import { REGION_COLORS } from '@/configs/constants';
 import type { Holiday } from '@/db/db';
 import { getCountryByRegionId, getHolidaysByRegionId } from '@/db/db';
 import { type HolidayTheme, useHolidaysStore } from '@/stores/useHolidaysStore';
-import { parseAsRegion, removeEmoji, selectOptions } from '@/utils/utils';
+import { parseAsRegion, removeEmoji, selectOptions } from '@/utils/functions';
 
 import { parseAsArrayOf, parseAsBoolean, useQueryState } from 'nuqs';
 import { useEffect } from 'react';

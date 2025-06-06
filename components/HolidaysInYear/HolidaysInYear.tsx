@@ -1,7 +1,7 @@
 'use client';
 import { getCountryByRegionId } from '@/db/db';
 import { useHolidaysStore } from '@/stores/useHolidaysStore';
-import { parseAsRegion } from '@/utils/utils';
+import { parseAsRegion } from '@/utils/functions';
 import { parseAsArrayOf, useQueryState } from 'nuqs';
 import Accordion from 'react-bootstrap/Accordion';
 

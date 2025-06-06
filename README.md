@@ -12,23 +12,28 @@
   - [x] Make it responsive
   - [x] Order options alphabetically
 - [x] Import all the data (US, Canada, Australia, China, Taiwan, Hong Kong, Taiwan, Philippines, UK, New Zealand)
-- [ ] (Optional) Server side rendering (Next.js)
-- [ ] (Optional) Auto select regions by IP
-- [ ] (Optional) Auto select date format and first weekday based on region
+- [x] (Optional) Server side rendering (Next.js)
   - [ ] Cache result in Redis
 - [x] SEO meta date, e.g. title, description, keywords
 - [x] Create google forms
-  - [ ] Report incorrect holidays
-  - [ ] Feedback / Contact us
-- [ ] Sentry bug tracking
+  - [x] Report incorrect holidays
+  - [x] Feedback / Contact us
 - [x] 🚢 Ship to production
 - [x] Migrate to Next.js
-- [ ] Upgrade to React 19
+- [x] Upgrade to React 19
 - [ ] Sitemap
 - [x] TypeScript
 - [x] CSS modules
+- [ ] Auto select regions by IP
+- [ ] (Optional) Auto select date format and first weekday based on region
+- [ ] Use API data
+- [ ] Sentry bug tracking
+- [ ] Refactor database import script
 - [ ] Paid Plans
   - [ ] No ads
   - [ ] Holiday API
   - [ ] Slack/Email notification
   - [ ] Google Calendar subscription
+
+# https://github.com/vercel/next.js/issues/73424#issuecomment-2881954822
+# https://www.reddit.com/r/nextjs/comments/1ih8dsq/nodejs_runtime_support_for_nextjs_middleware_is/
