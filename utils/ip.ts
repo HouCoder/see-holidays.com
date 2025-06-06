@@ -1,7 +1,19 @@
 import { fetchWithTimeout } from '@/utils/fetch';
 import { getRedisClient } from '@/utils/redis';
 
-export const getIpDetails = async (pureIp: string) => {
+type IpDetails = {
+  ip: string;
+  country: string | null;
+  country_code: string | null;
+  city: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  subdivision: string | null;
+};
+
+export const getIpDetails = async (
+  pureIp: string,
+): Promise<IpDetails | Record<string, never>> => {
   try {
     const redisClient = await getRedisClient();
     const redisKey = `IP: ${pureIp}`;

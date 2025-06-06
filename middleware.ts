@@ -1,3 +1,4 @@
+import { getRegions } from '@/db/queries/common';
 import { getIpDetails } from '@/utils/ip';
 import { ipAddress } from '@vercel/functions';
 import { NextResponse } from 'next/server';
@@ -24,10 +25,25 @@ export async function middleware(request: NextRequest) {
   }
 
   // ::ffff:192.168.21.159 -> 192.168.21.159
-  // const pureIp = ip.replace('::ffff:', '');
-  const pureIp = '116.255.39.202';
+  const pureIp = ip.replace('::ffff:', '');
+  // const pureIp = '116.255.39.202';
+  const ipDetails = await getIpDetails(pureIp);
+  const supportedRegions = (await getRegions()).map((r) => r.name);
 
-  console.log(await getIpDetails(pureIp));
+  if (
+    ipDetails.subdivision &&
+    supportedRegions.includes(ipDetails.subdivision)
+  ) {
+    url.searchParams.set('regions', ipDetails.subdivision);
+
+    return NextResponse.redirect(url);
+  }
+
+  if (ipDetails.country && supportedRegions.includes(ipDetails.country)) {
+    url.searchParams.set('regions', ipDetails.country);
+
+    return NextResponse.redirect(url);
+  }
 
   return NextResponse.next();
 }

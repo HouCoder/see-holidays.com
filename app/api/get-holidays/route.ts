@@ -1,8 +1,4 @@
-import db from '@/db/drizzle';
-import { date } from '@/db/schema/date';
-import { holiday } from '@/db/schema/holiday';
-import { region } from '@/db/schema/region';
-import { desc, eq, inArray } from 'drizzle-orm';
+import { getHolidaysByRegionId } from '@/db/queries/common';
 import { type NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 
@@ -59,23 +55,7 @@ export async function GET(request: NextRequest) {
   }
 
   const regionIds = queryParams.region_ids.split(',').map(Number);
-  const dbResult = await db
-    .select({
-      holidayId: holiday.id,
-      regionName: region.name,
-      holidayName: holiday.name,
-      description: holiday.description,
-      startDate: date.startDate,
-      endDate: date.endDate,
-      isWorkingDay: date.isWorkingDay,
-    })
-    .from(region)
-    .innerJoin(holiday, eq(region.id, holiday.regionId))
-    .innerJoin(date, eq(holiday.id, date.holidayId))
-    .where(inArray(region.id, regionIds))
-    .orderBy(desc(date.startDate))
-    .all();
-
+  const dbResult = await getHolidaysByRegionId(regionIds);
   const processedResult = dbResult.map((row) => ({
     ...row,
     isWorkingDay: Boolean(row.isWorkingDay),
