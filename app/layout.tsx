@@ -2,6 +2,7 @@ import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import type { Metadata } from 'next';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
+import GlobalStoreProvider from '@/providers/GlobalStoreProvider';
 import '@/styles/app.scss';
 
 export const metadata: Metadata = {
@@ -18,9 +19,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <NuqsAdapter>{children}</NuqsAdapter>
-        <Footer />
+        <GlobalStoreProvider initialHolidays={[
+          'New Year\'s Day',
+          'Independence Day',
+          'Christmas Day',
+          'Thanksgiving Day',
+          'Labor Day',
+          'Memorial Day',
+          'Veterans Day',
+          'Halloween',
+          'Valentine\'s Day',
+          'Easter Sunday',
+        ]}>
+          <Header />
+          <NuqsAdapter>
+            {children}
+          </NuqsAdapter>
+          <Footer />
+        </GlobalStoreProvider>
       </body>
     </html>
   );

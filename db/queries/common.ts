@@ -1,8 +1,9 @@
+import { desc, eq, inArray, sql } from 'drizzle-orm';
 import db from '@/db/drizzle';
 import { date } from '@/db/schema/date';
 import { holiday } from '@/db/schema/holiday';
+import { country } from '@/db/schema/country';
 import { region } from '@/db/schema/region';
-import { desc, eq, inArray } from 'drizzle-orm';
 
 export const getHolidaysByRegionId = async (regionIds: number[]) => {
   return await db
@@ -32,3 +33,72 @@ export const getRegions = async () => {
     .from(region)
     .all();
 };
+
+type GroupedRegions = Record<number, {
+  value: number;
+  label: string;
+}[]>;
+
+type SelectOptionBase = {
+  label: string;
+  name: string;
+};
+
+type SelectOptionSingle = SelectOptionBase & {
+  value: number;
+}
+
+type SelectOptionMulti = SelectOptionBase & {
+  options: { value: number; label: string }[];
+}
+
+type SelectOption = SelectOptionSingle | SelectOptionMulti;
+
+export const getSelectOptions = async () => {
+  const regions = await db
+    .select()
+    .from(region)
+    .all();
+  const countries = await db
+    .select()
+    .from(country)
+    .all();
+  const groupedRegions = regions.reduce((result: GroupedRegions, region) =>{
+      if (!result[region.countryId]) {
+        result[region.countryId] = [];
+      }
+
+      result[region.countryId].push({
+        value: region.id,
+        label: region.name,
+      });
+
+      result[region.countryId].sort((a, b) => a.label.localeCompare(b.label));
+
+      return result;
+  }, {});
+
+  const selectOptions: SelectOption[] = countries.map(country => {
+    const label = `${country.flag} ${country.name}`;
+
+    if (groupedRegions[country.id].length > 1) {
+      return {
+        label,
+        name: country.name,
+        options: groupedRegions[country.id],
+      };
+    }
+
+    if (groupedRegions[country.id].length === 1) {
+      return {
+        label,
+        name: country.name,
+        value: groupedRegions[country.id][0].value,
+      };
+    }
+  }).filter((option): option is SelectOption => option !== undefined);
+
+  selectOptions.sort((a, b) => a.name.localeCompare(b.name));
+
+  return selectOptions;
+}

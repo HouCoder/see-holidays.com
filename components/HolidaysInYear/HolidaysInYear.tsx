@@ -4,10 +4,17 @@ import { useHolidaysStore } from '@/stores/useHolidaysStore';
 import { parseAsRegion } from '@/utils/functions';
 import { parseAsArrayOf, useQueryState } from 'nuqs';
 import Accordion from 'react-bootstrap/Accordion';
+import { useGlobalStore } from '@/providers/GlobalStoreProvider';
 
 const HolidaysInYear = () => {
   const currentYear = new Date().getFullYear();
   const holidays = useHolidaysStore((state) => state.holidays);
+
+  const { holidays: serverHolidays } = useGlobalStore(
+    (state) => state,
+  )
+
+  console.log({serverHolidays});
   const [queryRegions] = useQueryState(
     'regions',
     parseAsArrayOf(parseAsRegion).withDefault([]),

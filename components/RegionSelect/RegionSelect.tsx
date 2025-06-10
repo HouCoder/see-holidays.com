@@ -31,7 +31,7 @@ const MultiValueLabel = (props: MultiValueLabelProps) => {
 };
 
 // https://github.com/JedWatson/react-select/pull/5972
-const RegionSelect = () => {
+const RegionSelect = ({options}) => {
   const setHolidays = useHolidaysStore((state) => state.setHolidays);
   const setHolidayThemes = useHolidaysStore((state) => state.setHolidayThemes);
   const [queryRegions, setQueryRegions] = useQueryState(
@@ -72,7 +72,7 @@ const RegionSelect = () => {
       <h3 className="mb-3">Select Regions</h3>
       <Select
         isMulti
-        options={selectOptions}
+        options={options}
         defaultValue={queryRegions}
         components={{ MultiValueLabel }}
         classNamePrefix="react-select"
