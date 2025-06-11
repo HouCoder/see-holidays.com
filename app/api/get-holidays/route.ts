@@ -56,10 +56,6 @@ export async function GET(request: NextRequest) {
 
   const regionIds = queryParams.region_ids.split(',').map(Number);
   const dbResult = await getHolidaysByRegionId(regionIds);
-  const processedResult = dbResult.map((row) => ({
-    ...row,
-    isWorkingDay: Boolean(row.isWorkingDay),
-  }));
 
-  return NextResponse.json(processedResult);
+  return NextResponse.json(dbResult);
 }

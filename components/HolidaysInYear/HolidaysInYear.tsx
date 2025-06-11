@@ -1,25 +1,13 @@
 'use client';
 import { getCountryByRegionId } from '@/db/db';
-import { useHolidaysStore } from '@/stores/useHolidaysStore';
-import { parseAsRegion } from '@/utils/functions';
-import { parseAsArrayOf, useQueryState } from 'nuqs';
-import Accordion from 'react-bootstrap/Accordion';
+import useSelectedRegions from '@/hooks/useSelectedRegions';
 import { useGlobalStore } from '@/providers/GlobalStoreProvider';
+import Accordion from 'react-bootstrap/Accordion';
 
 const HolidaysInYear = () => {
   const currentYear = new Date().getFullYear();
-  const holidays = useHolidaysStore((state) => state.holidays);
-
-  const { holidays: serverHolidays } = useGlobalStore(
-    (state) => state,
-  )
-
-  console.log({serverHolidays});
-  const [queryRegions] = useQueryState(
-    'regions',
-    parseAsArrayOf(parseAsRegion).withDefault([]),
-  );
-  const validRegions = queryRegions.filter((r) => r !== undefined);
+  const { holidays } = useGlobalStore((state) => state);
+  const validRegions = useSelectedRegions();
 
   if (validRegions.length === 0) {
     return null;

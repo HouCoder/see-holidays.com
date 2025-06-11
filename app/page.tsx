@@ -1,13 +1,13 @@
 import Calendar from '@/components/Calendar/Calendar';
 import HolidaysInYear from '@/components/HolidaysInYear/HolidaysInYear';
 import RegionSelect from '@/components/RegionSelect/RegionSelect';
+import { getSelectOptions } from '@/db/queries/common';
 import { Suspense } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { getSelectOptions } from '@/db/queries/common';
 
-export default async function  Home() {
+export default async function Home() {
   const selectOptions = await getSelectOptions();
 
   return (

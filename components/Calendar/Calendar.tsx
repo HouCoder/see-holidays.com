@@ -1,6 +1,7 @@
 'use client';
-
-import type { Holiday } from '@/db/db';
+import useSelectedRegions from '@/hooks/useSelectedRegions';
+import type { Holiday } from '@/providers/GlobalStoreProvider';
+import { useGlobalStore } from '@/providers/GlobalStoreProvider';
 import { useHolidaysStore } from '@/stores/useHolidaysStore';
 import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -13,8 +14,12 @@ import styles from './styles.module.scss';
 
 const Calendar = () => {
   const [showDialog, setShowDialog] = useState(false);
-  const holidays = useHolidaysStore((state) => state.holidays);
+  const { holidays } = useGlobalStore((state) => state);
   const holidayThemes = useHolidaysStore((state) => state.holidayThemes);
+  const validRegions = useSelectedRegions();
+  const validHolidays = holidays.filter((holiday) =>
+    validRegions.some((region) => region.value === holiday.regionId),
+  );
   const setSelectedEvent = useSelectedEventStore(
     (state) => state.setSelectedEvent,
   );
@@ -72,9 +77,13 @@ const Calendar = () => {
         themeSystem="bootstrap5"
         initialView="dayGridMonth"
         firstDay={sundayFirstDay ? 0 : 1}
-        events={holidays}
+        events={validHolidays.map((h) => ({
+          ...h,
+          end: h.end || undefined,
+        }))}
         eventOrder={(a, b) =>
-          holidays.indexOf(a as Holiday) - holidays.indexOf(b as Holiday)
+          validHolidays.indexOf(a as Holiday) -
+          validHolidays.indexOf(b as Holiday)
         }
         eventOrderStrict
         eventContent={({ event }) => {
