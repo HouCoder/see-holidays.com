@@ -21,6 +21,7 @@
     "lodash": "^4.17.21",
     "next": "15.4.0-canary.67",
     "nuqs": "^2.4.3",
+    "posthog-js": "^1.250.2",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",

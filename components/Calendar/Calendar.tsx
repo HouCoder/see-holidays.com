@@ -6,11 +6,12 @@ import { useHolidaysStore } from '@/stores/useHolidaysStore';
 import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import FullCalendar from '@fullcalendar/react';
+import { addDays, format, parseISO } from 'date-fns';
+import { fromPairs, sortBy } from 'lodash';
 import { parseAsBoolean, useQueryState } from 'nuqs';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { fromPairs, sortBy} from 'lodash';
 import styles from './styles.module.scss';
 
 const Calendar = () => {
@@ -22,7 +23,7 @@ const Calendar = () => {
     selectedRegions.some((region) => region.value === holiday.regionId),
   );
   const orderMap = fromPairs(selectedRegions.map((r, idx) => [r.value, idx]));
-  const sortedHolidays = sortBy(validHolidays, h => orderMap[h.regionId]);
+  const sortedHolidays = sortBy(validHolidays, (h) => orderMap[h.regionId]);
 
   const setSelectedEvent = useSelectedEventStore(
     (state) => state.setSelectedEvent,
@@ -83,7 +84,10 @@ const Calendar = () => {
         firstDay={sundayFirstDay ? 0 : 1}
         events={sortedHolidays.map((h) => ({
           ...h,
-          end: h.end || undefined,
+          // This value is exclusive. For example, if you have an all-day event that has an end of 2018-09-03, then it will span through 2018-09-02 and end before the start of 2018-09-03.
+          end: h.end
+            ? format(addDays(parseISO(h.end), 1), 'yyyy-MM-dd')
+            : undefined,
         }))}
         eventOrder={(a, b) =>
           sortedHolidays.indexOf(a as Holiday) -
