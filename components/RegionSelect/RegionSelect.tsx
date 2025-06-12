@@ -36,8 +36,7 @@ const MultiValueLabel = (props: MultiValueLabelProps) => {
 // https://github.com/JedWatson/react-select/pull/5972
 const RegionSelect = () => {
   const { selectOptions } = useGlobalStore((state) => state);
-  const { holidayThemes, setHolidayThemes } = useHolidaysStore((state) => state);
-  console.log(holidayThemes);
+  const { setHolidayThemes } = useHolidaysStore((state) => state);
   const [queryRegions, setQueryRegions] = useQueryState(
     'regions',
     parseAsArrayOf(parseAsRegion(selectOptions)).withDefault([]),

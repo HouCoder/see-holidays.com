@@ -8,8 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-export default async function Home() {
-
+export default function Home() {
   return (
     <Suspense>
       <Container>

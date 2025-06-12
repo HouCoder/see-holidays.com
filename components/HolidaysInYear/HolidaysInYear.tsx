@@ -30,7 +30,7 @@ const HolidaysInYear = () => {
                       holiday.start.startsWith(String(currentYear)),
                   )
                   .map((holiday) => (
-                    <li key={holiday.start}>
+                    <li key={`${holiday.title}-${holiday.start}`}>
                       <strong>{holiday.title}</strong>
                       <br />
                       <span className="fst-italic">
