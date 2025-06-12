@@ -16,9 +16,9 @@ const Calendar = () => {
   const [showDialog, setShowDialog] = useState(false);
   const { holidays } = useGlobalStore((state) => state);
   const holidayThemes = useHolidaysStore((state) => state.holidayThemes);
-  const validRegions = useSelectedRegions();
+  const selectedRegions = useSelectedRegions();
   const validHolidays = holidays.filter((holiday) =>
-    validRegions.some((region) => region.value === holiday.regionId),
+    selectedRegions.some((region) => region.value === holiday.regionId),
   );
   const setSelectedEvent = useSelectedEventStore(
     (state) => state.setSelectedEvent,

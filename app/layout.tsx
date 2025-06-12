@@ -1,6 +1,10 @@
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
-import { getHolidays } from '@/db/queries/common';
+import {
+  getHolidays,
+  getRegionEmojiMap,
+  getSelectOptions,
+} from '@/db/queries/common';
 import GlobalStoreProvider from '@/providers/GlobalStoreProvider';
 import type { Metadata } from 'next';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
@@ -18,6 +22,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const holidays = await getHolidays();
+  const selectOptions = await getSelectOptions();
+  const regionEmojiMap = await getRegionEmojiMap();
 
   return (
     <html lang="en">
@@ -25,6 +31,8 @@ export default async function RootLayout({
         <GlobalStoreProvider
           globalStore={{
             holidays,
+            selectOptions,
+            regionEmojiMap,
           }}
         >
           <Header />

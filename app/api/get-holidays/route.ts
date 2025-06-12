@@ -4,22 +4,6 @@ import { z } from 'zod';
 
 export const dynamic = 'force-dynamic';
 
-/*
-SQL to select holidays by region id
-SELECT subquery.holiday_id, subquery.region_name, subquery.holiday_name, subquery.description, date.start_date, date.end_date, date.is_working_day
-FROM (
-    SELECT holiday.id AS holiday_id,
-           region.name AS region_name,
-           holiday.name AS holiday_name,
-           holiday.description
-    FROM region
-    INNER JOIN holiday ON region.id = holiday.region_id
-    WHERE region.id = 1
-) AS subquery
-INNER JOIN date ON subquery.holiday_id = date.holiday_id
-ORDER BY date.start_date;
-*/
-
 const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
 const validator = z.object({
   region_ids: z

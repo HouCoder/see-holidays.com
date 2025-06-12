@@ -1,26 +1,25 @@
 'use client';
-import { getCountryByRegionId } from '@/db/db';
 import useSelectedRegions from '@/hooks/useSelectedRegions';
 import { useGlobalStore } from '@/providers/GlobalStoreProvider';
 import Accordion from 'react-bootstrap/Accordion';
 
 const HolidaysInYear = () => {
   const currentYear = new Date().getFullYear();
-  const { holidays } = useGlobalStore((state) => state);
-  const validRegions = useSelectedRegions();
+  const { holidays, regionEmojiMap } = useGlobalStore((state) => state);
+  const selectedRegions = useSelectedRegions();
 
-  if (validRegions.length === 0) {
+  if (selectedRegions.length === 0) {
     return null;
   }
 
   return (
     <div className="holidays-in-year d-none d-lg-block">
       <h3 className="mb-3">Public Holidays in {currentYear}</h3>
-      <Accordion defaultActiveKey={String(validRegions[0].value)}>
-        {validRegions.map((region) => (
+      <Accordion defaultActiveKey={String(selectedRegions[0].value)}>
+        {selectedRegions.map((region) => (
           <Accordion.Item key={region.value} eventKey={String(region.value)}>
             <Accordion.Header>
-              {getCountryByRegionId(region.value)?.flag} {region.label}
+              {regionEmojiMap[region.value]} {region.label}
             </Accordion.Header>
             <Accordion.Body>
               <ul className="ps-3 m-0">

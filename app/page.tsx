@@ -1,21 +1,21 @@
+'use client';
+
 import Calendar from '@/components/Calendar/Calendar';
 import HolidaysInYear from '@/components/HolidaysInYear/HolidaysInYear';
 import RegionSelect from '@/components/RegionSelect/RegionSelect';
-import { getSelectOptions } from '@/db/queries/common';
 import { Suspense } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 export default async function Home() {
-  const selectOptions = await getSelectOptions();
 
   return (
     <Suspense>
       <Container>
         <Row>
           <Col className="col-lg-3 col-12">
-            <RegionSelect options={selectOptions} />
+            <RegionSelect />
             <HolidaysInYear />
           </Col>
           <Col className="col-lg-9 col-12">

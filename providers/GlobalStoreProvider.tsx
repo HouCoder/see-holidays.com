@@ -1,5 +1,6 @@
 'use client';
 
+import type { SelectOption } from '@/db/queries/common';
 import React, { useContext } from 'react';
 import { type StoreApi, useStore } from 'zustand';
 import { createStore } from 'zustand/vanilla';
@@ -18,6 +19,8 @@ export type Holiday = {
 
 type GlobalStore = {
   holidays: Holiday[];
+  selectOptions: SelectOption[];
+  regionEmojiMap: Record<string, string>;
 };
 
 const GlobalStoreContext = React.createContext<StoreApi<GlobalStore> | null>(
