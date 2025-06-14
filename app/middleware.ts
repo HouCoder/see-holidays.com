@@ -27,6 +27,7 @@ export async function middleware(request: NextRequest) {
   // ::ffff:192.168.21.159 -> 192.168.21.159
   const pureIp = ip.replace('::ffff:', '');
   // const pureIp = '116.255.39.202';
+  console.log(pureIp);
   const ipDetails = await getIpDetails(pureIp);
   const supportedRegions = (await getRegions()).map((r) => r.name);
 

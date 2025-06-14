@@ -19,7 +19,7 @@
     "date-fns": "^4.1.0",
     "drizzle-orm": "^0.44.1",
     "lodash": "^4.17.21",
-    "next": "15.4.0-canary.67",
+    "next": "15.4.0-canary.82",
     "nuqs": "^2.4.3",
     "posthog-js": "^1.250.2",
     "react": "^19.1.0",
