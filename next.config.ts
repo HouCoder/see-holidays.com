@@ -6,11 +6,6 @@ const nextConfig: NextConfig = {
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
   },
-
-  // https://github.com/vercel/next.js/blob/v15.3.3/docs/01-app/03-building-your-application/01-routing/14-middleware.mdx#runtime
-  experimental: {
-    nodeMiddleware: true,
-  },
 };
 
 export default nextConfig;

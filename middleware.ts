@@ -1,4 +1,3 @@
-import { getRegions } from '@/db/queries/common';
 import { getIpDetails } from '@/utils/ip';
 import { ipAddress } from '@vercel/functions';
 import { NextResponse } from 'next/server';
@@ -6,7 +5,6 @@ import type { NextRequest } from 'next/server';
 
 // Only run on public routes (skip _next, api, static, etc)
 export const config = {
-  runtime: 'nodejs',
   matcher: ['/((?!_next|api|static|favicon.ico).*)'],
 };
 
@@ -26,9 +24,18 @@ export async function middleware(request: NextRequest) {
 
   // ::ffff:192.168.21.159 -> 192.168.21.159
   const pureIp = ip.replace('::ffff:', '');
-  // const pureIp = '116.255.39.202';
   const ipDetails = await getIpDetails(pureIp);
-  const supportedRegions = (await getRegions()).map((r) => r.name);
+  const supportedRegions = [
+    'China',
+    'South Australia',
+    'New South Wales',
+    'Western Australia',
+    'Tasmania',
+    'Northern Territory',
+    'Victoria',
+    'Queensland',
+    'Australian Capital Territory',
+  ];
 
   if (
     ipDetails.subdivision &&

@@ -1,47 +1,44 @@
-import { type RedisClientType, createClient } from 'redis';
+import type { IpDetails } from '@/utils/ip';
+import { Redis } from '@upstash/redis';
 
-let client: RedisClientType | null = null;
+let client: Redis | null = null;
 
-export async function getRedisClient(): Promise<RedisClientType> {
+const getRedisClient = () => {
   if (client) {
     return client;
   }
 
-  try {
-    client = createClient({
-      url: process.env.REDIS_HOST,
-      socket: {
-        reconnectStrategy: (retries, cause) => {
-          console.error('Redis connection error:', cause);
-          console.log(`Reconnecting to Redis... Attempt #${retries}`);
-
-          return Math.min(retries * 50, 500);
-        },
-      },
-    });
-
-    await client.connect();
-    console.log('Connected to Redis');
-  } catch (error) {
-    console.error('Failed to connect to Redis:', error);
-    client = null;
-    throw error;
-  }
+  client = new Redis({
+    url: process.env.UPSTASH_REDIS_REST_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN,
+    latencyLogging: true,
+    keepAlive: true,
+  });
 
   return client;
+};
+
+export async function setRedisKey(
+  key: string,
+  value: string,
+  expiration: number = Number(process.env.UPSTASH_REDIS_EXPIRATION),
+): Promise<void> {
+  try {
+    const redisClient = getRedisClient();
+    await redisClient.set(key, value, { ex: expiration });
+  } catch (error) {
+    console.error(`Error setting Redis key ${key}:`, error);
+  }
 }
 
-export async function disconnectRedis(): Promise<void> {
-  if (!client) {
-    return;
-  }
-
+export async function getRedisKey(key: string): Promise<IpDetails | null> {
   try {
-    await client.disconnect();
-    console.log('Disconnected from Redis');
+    const redisClient = getRedisClient();
+    const value = await redisClient.get<IpDetails>(key);
+
+    return value;
   } catch (error) {
-    console.error('Error disconnecting from Redis:', error);
-  } finally {
-    client = null;
+    console.error(`Error getting Redis key ${key}:`, error);
+    return null;
   }
 }

@@ -1,7 +1,7 @@
 import { fetchWithTimeout } from '@/utils/fetch';
-import { getRedisClient } from '@/utils/redis';
+import { getRedisKey, setRedisKey } from '@/utils/redis';
 
-type IpDetails = {
+export type IpDetails = {
   ip: string;
   country: string | null;
   country_code: string | null;
@@ -15,16 +15,15 @@ export const getIpDetails = async (
   pureIp: string,
 ): Promise<IpDetails | Record<string, never>> => {
   try {
-    const redisClient = await getRedisClient();
     const redisKey = `IP: ${pureIp}`;
 
     // Try to get the data from Redis first
-    const cachedData = await redisClient.get(redisKey);
+    const cachedData = await getRedisKey(redisKey);
 
     // If we have cached data, parse and return it
     if (cachedData) {
       console.log('IP details found in Redis cache');
-      return JSON.parse(cachedData);
+      return cachedData;
     }
 
     // If not in cache, fetch from API
@@ -35,9 +34,7 @@ export const getIpDetails = async (
     const ipDetails = await ipDetailRequest.json();
 
     // Store in Redis for future use
-    await redisClient.set(redisKey, JSON.stringify(ipDetails), {
-      EX: Number(process.env.REDIS_EXPIRATION),
-    });
+    setRedisKey(redisKey, JSON.stringify(ipDetails));
 
     return ipDetails;
   } catch (error) {
