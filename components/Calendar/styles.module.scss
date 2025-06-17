@@ -67,7 +67,7 @@
     display: none;
   }
 
-  @each $name, $color in $eventOptionColorsMap {
+  @each $name, $color in $eventColorMap {
     :global(.fc-event--#{$name}) {
       border-color: $color !important;
       background-color: $color !important;
@@ -80,7 +80,7 @@
 
   :global(.fc-event-title) {
     text-overflow: ellipsis;
-    color: hsl(0, 0%, 20%) !important;
+    color: white;
   }
 
   :global(.fc-daygrid-day-events) {

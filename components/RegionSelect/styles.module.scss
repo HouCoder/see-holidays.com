@@ -19,12 +19,17 @@
 
   $index: 1; // Initialize the index variable
 
-  @each $color in $eventOptionColorsList {
+  @each $color in $eventColorList {
     :global(.react-select__multi-value:nth-child(#{$index})) {
-      background-color: list.nth($eventOptionColorsList, $index) !important;
+      color: white;
+      background-color: list.nth($eventColorList, $index) !important;
     }
 
     $index: $index + 1;
+  }
+
+  :global(.react-select__multi-value__label) {
+    color: white !important;
   }
 
   :global(.react-select__group-heading) {
