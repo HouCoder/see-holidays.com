@@ -4,6 +4,7 @@ import {
   sqliteTable,
   text,
 } from 'drizzle-orm/sqlite-core';
+import { holiday } from './holiday';
 
 const booleanInteger = customType<{
   data: boolean;
@@ -17,8 +18,12 @@ const booleanInteger = customType<{
 });
 
 export const date = sqliteTable('date', {
-  id: integer().primaryKey(),
-  holidayId: integer('holiday_id').notNull(),
+  id: integer().primaryKey({
+    autoIncrement: true,
+  }),
+  holidayId: integer('holiday_id')
+    .notNull()
+    .references(() => holiday.id),
   startDate: text('start_date').notNull(),
   endDate: text('end_date'),
   isWorkingDay: booleanInteger('is_working_day'),

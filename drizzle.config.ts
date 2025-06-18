@@ -1,10 +1,13 @@
-import path from 'node:path';
+import 'dotenv/config';
 import { defineConfig } from 'drizzle-kit';
 
 export default defineConfig({
-  dialect: 'sqlite',
   schema: './db/schema/*',
+  out: './db/migrations',
+  dialect: 'sqlite',
   dbCredentials: {
-    url: `file:${path.join(process.cwd(), 'source.db')}`,
+    url: process.env.DB_FILE_NAME as string,
   },
+  verbose: true,
+  strict: true,
 });

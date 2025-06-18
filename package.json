@@ -6,8 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "tsc": "tsc",
-    "lint": "biome check --write ./"
+    "lint": "biome check --write ./ && tsc --noEmit",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.17",
@@ -36,6 +38,7 @@
     "@types/node": "^22.15.29",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^16.5.0",
     "drizzle-kit": "^0.31.1",
     "sass": "^1.89.1",
     "typescript": "^5"

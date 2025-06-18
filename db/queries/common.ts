@@ -1,4 +1,4 @@
-import db from '@/db/drizzle';
+import db from '@/db/client';
 import { country } from '@/db/schema/country';
 import { date } from '@/db/schema/date';
 import { holiday } from '@/db/schema/holiday';
