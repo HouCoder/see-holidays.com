@@ -5,20 +5,6 @@ import { holiday } from '@/db/schema/holiday';
 import { region } from '@/db/schema/region';
 import { desc, eq, inArray, sql } from 'drizzle-orm';
 
-/*
-SELECT subquery.holiday_id, subquery.region_name, subquery.holiday_name, subquery.description, date.start_date, date.end_date, date.is_working_day
-FROM (
-    SELECT holiday.id AS holiday_id,
-           region.name AS region_name,
-           holiday.name AS holiday_name,
-           holiday.description
-    FROM region
-    INNER JOIN holiday ON region.id = holiday.region_id
-    WHERE region.id = 1
-) AS subquery
-INNER JOIN date ON subquery.holiday_id = date.holiday_id
-ORDER BY date.start_date;
-*/
 export const getHolidaysByRegionId = async (regionIds: number[]) => {
   return await db
     .select({
@@ -116,23 +102,6 @@ export const getSelectOptions = async () => {
   return selectOptions;
 };
 
-/*
-SELECT
-  holiday.name,
-  description,
-  link,
-  start_date as startDate,
-  end_date as endDate,
-  is_working_day AS workingDay,
-  region.id AS regionId,
-  region.name AS regionName,
-  country.flag
-FROM holiday
-JOIN date ON date.holiday_id = holiday.id
-JOIN region ON holiday.region_id = region.id
-JOIN country ON country.id = region.country_id
-ORDER BY region.id ASC
-*/
 export const getHolidays = async () => {
   return await db
     .select({
@@ -154,13 +123,6 @@ export const getHolidays = async () => {
     .all();
 };
 
-/*
-SELECT
-  region.id as id,
-  flag
-FROM region
-JOIN country ON region.country_id = country.id;
-*/
 export const getRegionEmojiMap = async () => {
   const map: Record<string, string> = {};
   const queryResult = await db

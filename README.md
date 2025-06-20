@@ -13,7 +13,6 @@
   - [x] Order options alphabetically
 - [x] Import all the data (Australia, China)
 - [x] (Optional) Server side rendering (Next.js)
-  - [ ] Cache result in Redis
 - [x] SEO meta date, e.g. title, description, keywords
 - [x] Create google forms
   - [x] Report incorrect holidays
@@ -26,9 +25,9 @@
 - [x] CSS modules
 - [x] Auto select regions by IP
 - [ ] (Optional) Auto select date format and first weekday based on region
-- [ ] Use API data
+- [x] Use API data
 - [ ] Sentry bug tracking
-- [ ] Refactor database import script
+- [x] Refactor database import script
 - [ ] Paid Plans
   - [ ] No ads
   - [ ] Holiday API

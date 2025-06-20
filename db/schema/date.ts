@@ -3,6 +3,7 @@ import {
   integer,
   sqliteTable,
   text,
+  unique,
 } from 'drizzle-orm/sqlite-core';
 import { holiday } from './holiday';
 
@@ -17,16 +18,20 @@ const booleanInteger = customType<{
   fromDriver: (value) => Boolean(value),
 });
 
-export const date = sqliteTable('date', {
-  id: integer().primaryKey({
-    autoIncrement: true,
-  }),
-  holidayId: integer('holiday_id')
-    .notNull()
-    .references(() => holiday.id),
-  startDate: text('start_date').notNull(),
-  endDate: text('end_date'),
-  isWorkingDay: booleanInteger('is_working_day'),
-});
+export const date = sqliteTable(
+  'date',
+  {
+    id: integer().primaryKey({
+      autoIncrement: true,
+    }),
+    holidayId: integer('holiday_id')
+      .notNull()
+      .references(() => holiday.id),
+    startDate: text('start_date').notNull(),
+    endDate: text('end_date'),
+    isWorkingDay: booleanInteger('is_working_day'),
+  },
+  (table) => [unique().on(table.holidayId, table.startDate)],
+);
 
 export type Date = typeof date.$inferSelect;

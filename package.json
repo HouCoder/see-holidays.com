@@ -1,6 +1,5 @@
 {
   "name": "seeholidays",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -9,7 +8,8 @@
     "lint": "biome check --write ./ && tsc --noEmit",
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:import": "tsx db/import.ts"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.17",
@@ -41,6 +41,7 @@
     "dotenv": "^16.5.0",
     "drizzle-kit": "^0.31.1",
     "sass": "^1.89.1",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   }
 }

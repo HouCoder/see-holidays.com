@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "eeb4aaba-45bc-4da1-bec9-06dee121780b",
+  "id": "4d626128-07e4-44c2-9d66-0cad6121a0dc",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "country": {
@@ -25,14 +25,23 @@
           "name": "flag",
           "type": "text",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "autoincrement": false
         }
       },
       "indexes": {
         "country_name_unique": {
           "name": "country_name_unique",
-          "columns": ["name"],
+          "columns": [
+            "name"
+          ],
+          "isUnique": true
+        },
+        "country_flag_unique": {
+          "name": "country_flag_unique",
+          "columns": [
+            "flag"
+          ],
           "isUnique": true
         }
       },
@@ -80,14 +89,27 @@
           "autoincrement": false
         }
       },
-      "indexes": {},
+      "indexes": {
+        "date_holiday_id_start_date_unique": {
+          "name": "date_holiday_id_start_date_unique",
+          "columns": [
+            "holiday_id",
+            "start_date"
+          ],
+          "isUnique": true
+        }
+      },
       "foreignKeys": {
         "date_holiday_id_holiday_id_fk": {
           "name": "date_holiday_id_holiday_id_fk",
           "tableFrom": "date",
           "tableTo": "holiday",
-          "columnsFrom": ["holiday_id"],
-          "columnsTo": ["id"],
+          "columnsFrom": [
+            "holiday_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -135,14 +157,27 @@
           "autoincrement": false
         }
       },
-      "indexes": {},
+      "indexes": {
+        "holiday_region_id_name_unique": {
+          "name": "holiday_region_id_name_unique",
+          "columns": [
+            "region_id",
+            "name"
+          ],
+          "isUnique": true
+        }
+      },
       "foreignKeys": {
         "holiday_region_id_region_id_fk": {
           "name": "holiday_region_id_region_id_fk",
           "tableFrom": "holiday",
           "tableTo": "region",
-          "columnsFrom": ["region_id"],
-          "columnsTo": ["id"],
+          "columnsFrom": [
+            "region_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -179,7 +214,9 @@
       "indexes": {
         "region_name_unique": {
           "name": "region_name_unique",
-          "columns": ["name"],
+          "columns": [
+            "name"
+          ],
           "isUnique": true
         }
       },
@@ -188,8 +225,12 @@
           "name": "region_country_id_country_id_fk",
           "tableFrom": "region",
           "tableTo": "country",
-          "columnsFrom": ["country_id"],
-          "columnsTo": ["id"],
+          "columnsFrom": [
+            "country_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
           "onDelete": "no action",
           "onUpdate": "no action"
         }

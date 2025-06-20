@@ -5,7 +5,7 @@ export const country = sqliteTable('country', {
     autoIncrement: true,
   }),
   name: text().unique().notNull(),
-  flag: text(),
+  flag: text().unique().notNull(),
 });
 
 export type Country = typeof country.$inferSelect;
