@@ -28,6 +28,16 @@
 - [x] Use API data
 - [ ] Sentry bug tracking
 - [x] Refactor database import script
+- [ ] Fix Next.js SSR issue
+- [ ] New regions to support
+  - [ ] Hong Kong
+  - [ ] Taiwan
+  - [x] Singapore
+  - [ ] Japan
+  - [ ] South Korea
+  - [ ] Malaysia
+  - [ ] Philippines
+  - [ ] New Zealand
 - [ ] Paid Plans
   - [ ] No ads
   - [ ] Holiday API

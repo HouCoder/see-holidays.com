@@ -35,6 +35,7 @@ export async function middleware(request: NextRequest) {
     'Victoria',
     'Queensland',
     'Australian Capital Territory',
+    'Singapore',
   ];
 
   if (
