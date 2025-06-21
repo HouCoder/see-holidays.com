@@ -5,7 +5,7 @@ export default {
   link: "https://en.wikipedia.org/wiki/New_Year's_Day",
   dates: [
     {
-      startDate: "2025-01-01",
+      startDate: '2025-01-01',
     },
   ],
 };

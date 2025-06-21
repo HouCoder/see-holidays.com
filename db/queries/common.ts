@@ -3,7 +3,7 @@ import { country } from '@/db/schema/country';
 import { date } from '@/db/schema/date';
 import { holiday } from '@/db/schema/holiday';
 import { region } from '@/db/schema/region';
-import { desc, eq, inArray, sql } from 'drizzle-orm';
+import { asc, eq, inArray } from 'drizzle-orm';
 
 export const getHolidaysByRegionId = async (regionIds: number[]) => {
   return await db
@@ -20,7 +20,7 @@ export const getHolidaysByRegionId = async (regionIds: number[]) => {
     .innerJoin(holiday, eq(region.id, holiday.regionId))
     .innerJoin(date, eq(holiday.id, date.holidayId))
     .where(inArray(region.id, regionIds))
-    .orderBy(desc(date.startDate))
+    .orderBy(asc(date.startDate))
     .all();
 };
 
@@ -119,7 +119,7 @@ export const getHolidays = async () => {
     .innerJoin(date, eq(holiday.id, date.holidayId))
     .innerJoin(region, eq(holiday.regionId, region.id))
     .innerJoin(country, eq(region.countryId, country.id))
-    .orderBy(desc(date.startDate))
+    .orderBy(asc(date.startDate))
     .all();
 };
 

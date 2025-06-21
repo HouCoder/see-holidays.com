@@ -32,16 +32,12 @@
       "indexes": {
         "country_name_unique": {
           "name": "country_name_unique",
-          "columns": [
-            "name"
-          ],
+          "columns": ["name"],
           "isUnique": true
         },
         "country_flag_unique": {
           "name": "country_flag_unique",
-          "columns": [
-            "flag"
-          ],
+          "columns": ["flag"],
           "isUnique": true
         }
       },
@@ -92,10 +88,7 @@
       "indexes": {
         "date_holiday_id_start_date_unique": {
           "name": "date_holiday_id_start_date_unique",
-          "columns": [
-            "holiday_id",
-            "start_date"
-          ],
+          "columns": ["holiday_id", "start_date"],
           "isUnique": true
         }
       },
@@ -104,12 +97,8 @@
           "name": "date_holiday_id_holiday_id_fk",
           "tableFrom": "date",
           "tableTo": "holiday",
-          "columnsFrom": [
-            "holiday_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["holiday_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -160,10 +149,7 @@
       "indexes": {
         "holiday_region_id_name_unique": {
           "name": "holiday_region_id_name_unique",
-          "columns": [
-            "region_id",
-            "name"
-          ],
+          "columns": ["region_id", "name"],
           "isUnique": true
         }
       },
@@ -172,12 +158,8 @@
           "name": "holiday_region_id_region_id_fk",
           "tableFrom": "holiday",
           "tableTo": "region",
-          "columnsFrom": [
-            "region_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["region_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -214,9 +196,7 @@
       "indexes": {
         "region_name_unique": {
           "name": "region_name_unique",
-          "columns": [
-            "name"
-          ],
+          "columns": ["name"],
           "isUnique": true
         }
       },
@@ -225,12 +205,8 @@
           "name": "region_country_id_country_id_fk",
           "tableFrom": "region",
           "tableTo": "country",
-          "columnsFrom": [
-            "country_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["country_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }

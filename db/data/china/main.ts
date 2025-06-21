@@ -1,40 +1,31 @@
-import newYearsDay from '../new-years-day';
+import commonHolidays from '../common';
+
+const buildSpecialWorkingDay = (
+  startDate: string,
+  endDate: string | null = null,
+) => ({
+  name: 'Special Working Day',
+  description:
+    'In China, certain weekends are designated as “make‑up” working days—swapped for adjacent weekdays off—to create extended consecutive public holiday periods around festivals like Spring Festival or National Day.',
+  link: 'https://teamedupchina.com/special-working-days-china',
+  dates: [
+    {
+      startDate,
+      endDate,
+      isWorkingDay: true,
+    },
+  ],
+});
 
 export default {
   emoji: '🇨🇳',
   country: 'China',
   regions: {
     China: [
-      newYearsDay,
+      commonHolidays.newYearsDay,
+      buildSpecialWorkingDay('2025-01-26'),
       {
-        name: 'Special Working Day',
-        description:
-          'In China, certain weekends are designated as “make‑up” working days—swapped for adjacent weekdays off—to create extended consecutive public holiday periods around festivals like Spring Festival or National Day.',
-        link: 'https://teamedupchina.com/special-working-days-china',
-        dates: [
-          {
-            startDate: '2025-01-26',
-            isWorkingDay: true,
-          },
-          {
-            startDate: '2025-02-08',
-            isWorkingDay: true,
-          },
-          {
-            startDate: '2025-04-27',
-            isWorkingDay: true,
-          },
-          {
-            startDate: '2025-09-28',
-            isWorkingDay: true,
-          },
-        ],
-      },
-      {
-        name: 'Chinese New Year',
-        description:
-          'Chinese New Year, or the Spring Festival, is a festival that celebrates the beginning of a new year on the traditional lunisolar Chinese calendar.',
-        link: 'https://en.wikipedia.org/wiki/Chinese_New_Year',
+        ...commonHolidays.chineseNewYear,
         dates: [
           {
             startDate: '2025-01-28',
@@ -42,10 +33,10 @@ export default {
           },
         ],
       },
+      buildSpecialWorkingDay('2025-02-08'),
       {
         name: 'Qingming Festival',
-        description:
-          "Qingming Festival is also called Tomb Sweeping Day as it is the time for Chinese people to show respect to their ancestors by cleaning their ancestors' tombs and placing offerings.",
+        description: `The Qingming Festival (or Ching Ming Festival) is a traditional Chinese holiday where people honor their ancestors by visiting their graves to clean the sites, make offerings, and pay respects, often combined with spring outings to enjoy nature.`,
         link: 'https://en.wikipedia.org/wiki/Qingming_Festival',
         dates: [
           {
@@ -54,11 +45,11 @@ export default {
           },
         ],
       },
+      buildSpecialWorkingDay('2025-04-27'),
       {
         name: 'Labour Day',
-        description:
-          'In China, Labour Day, also known as May Day, is a statutory holiday celebrated on May 1st. It is a national holiday, officially recognized as a public holiday since 1949.',
-        link: 'https://en.wikipedia.org/wiki/International_Workers%27_Day',
+        description: `Labour Day is an annual day of celebration of the labour movement and its achievements. It has its origins in the labour union movement, specifically the eight-hour day movement, which advocated eight hours for work, eight hours for recreation, and eight hours for rest.`,
+        link: 'https://en.wikipedia.org/wiki/Labour_Day',
         dates: [
           {
             startDate: '2025-05-01',
@@ -78,6 +69,7 @@ export default {
           },
         ],
       },
+      buildSpecialWorkingDay('2025-09-28'),
       {
         name: 'National Day',
         description:
@@ -90,6 +82,17 @@ export default {
           },
         ],
       },
+      {
+        name: 'Mid-Autumn Festival',
+        description: `The Mid-Autumn Festival is celebrated when the moon is believed to be at its fullest and brightest. In Chinese culture, the full moon symbolizes reunion, making it a central theme of the festival.`,
+        link: 'https://en.wikipedia.org/wiki/Mid-Autumn_Festival',
+        dates: [
+          {
+            startDate: '2025-10-06',
+          },
+        ],
+      },
+      buildSpecialWorkingDay('2025-10-11'),
     ],
   },
 };

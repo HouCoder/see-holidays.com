@@ -1,7 +1,7 @@
-import newYearsDay from '../new-years-day';
+import commonHolidays from '../common';
 
-const commonHolidays = {
-  newYearsDay,
+export default {
+  newYearsDay: commonHolidays.newYearsDay,
   australiaDay: {
     name: 'Australia Day',
     description:
@@ -91,11 +91,4 @@ const commonHolidays = {
       },
     ],
   },
-  additionalDay: {
-    name: 'Additional Day',
-    description:
-      'When a certain holiday falls on a Saturday or Sunday the next following Monday is also a public holiday',
-  },
 };
-
-export default commonHolidays;

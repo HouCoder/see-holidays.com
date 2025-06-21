@@ -14,9 +14,7 @@ export const holiday = sqliteTable(
     description: text(),
     link: text(),
   },
-  (table) => [
-    unique().on(table.regionId, table.name),
-  ]
+  (table) => [unique().on(table.regionId, table.name)],
 );
 
 export type Holiday = typeof holiday.$inferSelect;

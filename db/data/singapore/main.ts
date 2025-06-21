@@ -1,18 +1,15 @@
 // https://www.mom.gov.sg/employment-practices/public-holidays
 
-import newYearsDay from '../new-years-day';
+import commonHolidays from '../common';
 
 export default {
   emoji: '🇸🇬',
   country: 'Singapore',
   regions: {
     Singapore: [
-      newYearsDay,
+      commonHolidays.newYearsDay,
       {
-        name: 'Chinese New Year',
-        description:
-          'Chinese New Year, or the Spring Festival, is a festival that celebrates the beginning of a new year on the traditional lunisolar Chinese calendar.',
-        link: 'https://en.wikipedia.org/wiki/Chinese_New_Year',
+        ...commonHolidays.chineseNewYear,
         dates: [
           {
             startDate: '2025-01-29',
@@ -22,8 +19,7 @@ export default {
       },
       {
         name: 'Hari Raya Puasa',
-        description:
-          `Hari Raya Puasa is a joyous celebration that marks the end of the fasting month of Ramadan. It's also a time for families and friends to come together, share meals, and seek forgiveness.`,
+        description: `Hari Raya Puasa is a joyous celebration that marks the end of the fasting month of Ramadan. It's also a time for families and friends to come together, share meals, and seek forgiveness.`,
         link: 'https://en.wikipedia.org/wiki/Eid_al-Fitr',
         dates: [
           {

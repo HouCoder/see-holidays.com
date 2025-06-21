@@ -3,13 +3,14 @@ import { and, eq } from 'drizzle-orm';
 import dbClient from './client';
 import australia from './data/australia/main';
 import china from './data/china/main';
+import hongKong from './data/hong-kong/main';
 import singapore from './data/singapore/main';
 import { country as countryTable } from './schema/country';
 import { date as dateTable } from './schema/date';
 import { holiday as holidayTable } from './schema/holiday';
 import { region as regionTable } from './schema/region';
 
-const collection = [australia, china, singapore] as const;
+const collection = [australia, china, singapore, hongKong] as const;
 
 type IdMap = Record<string, number>;
 type Date = {
