@@ -31,7 +31,7 @@
 - [ ] Fix Next.js SSR issue
 - [ ] New regions to support
   - [x] Hong Kong
-  - [ ] Taiwan
+  - [x] Taiwan
   - [x] Singapore
   - [ ] Japan
   - [ ] South Korea

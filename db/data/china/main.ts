@@ -1,21 +1,4 @@
-import commonHolidays from '../common';
-
-const buildSpecialWorkingDay = (
-  startDate: string,
-  endDate: string | null = null,
-) => ({
-  name: 'Special Working Day',
-  description:
-    'In China, certain weekends are designated as “make‑up” working days—swapped for adjacent weekdays off—to create extended consecutive public holiday periods around festivals like Spring Festival or National Day.',
-  link: 'https://teamedupchina.com/special-working-days-china',
-  dates: [
-    {
-      startDate,
-      endDate,
-      isWorkingDay: true,
-    },
-  ],
-});
+import commonHolidays, { buildSpecialWorkingDay } from '../common';
 
 export default {
   emoji: '🇨🇳',

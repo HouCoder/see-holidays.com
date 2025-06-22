@@ -19,6 +19,22 @@ export default {
   additionalHoliday: {
     name: 'Additional Holiday',
     description:
-      'When a certain holiday falls on a Saturday or Sunday the next following Monday is also a public holiday',
+      'If two holidays fall on the same day, an adjacent working day may be given as an extra holiday; similarly, if a holiday falls on a weekend, the following Monday becomes a public holiday.',
   },
 };
+
+export const buildSpecialWorkingDay = (
+  startDate: string,
+  endDate: string | null = null,
+) => ({
+  name: 'Special Working Day',
+  description:
+    'Certain weekends are designated working days scheduled to compensate for time off on long public holidays, often resulting in employees working on a weekend to make up for an extended holiday period.',
+  dates: [
+    {
+      startDate,
+      endDate,
+      isWorkingDay: true,
+    },
+  ],
+});
