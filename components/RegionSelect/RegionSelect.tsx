@@ -1,7 +1,7 @@
 'use client';
 
 import { parseAsArrayOf, parseAsBoolean, useQueryState } from 'nuqs';
-import { useEffect } from 'react';
+import { useEffect, useId } from 'react';
 import FormCheck from 'react-bootstrap/FormCheck';
 import Select, { components, type MultiValueGenericProps } from 'react-select';
 
@@ -49,6 +49,7 @@ const RegionSelect = () => {
     'show-week-numbers',
     parseAsBoolean.withDefault(false),
   );
+  const id = useId();
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: This effect should only run once
   useEffect(() => {
@@ -96,7 +97,7 @@ const RegionSelect = () => {
         className="my-3"
         checked={sundayFirstDay}
         type="switch"
-        id="sunday-first-day"
+        id={`${id}-sunday-first-day`}
         label="Weekday starts on Sunday"
         onChange={(event) => {
           const { checked } = event.target;
@@ -107,7 +108,7 @@ const RegionSelect = () => {
         className="my-3"
         checked={showWeekNumbers}
         type="switch"
-        id="show-week-number"
+        id={`${id}-show-week-number`}
         label="Show week numbers"
         onChange={(event) => {
           const { checked } = event.target;

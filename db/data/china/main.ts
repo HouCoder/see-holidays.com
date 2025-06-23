@@ -19,7 +19,8 @@ export default {
       buildAdditionalWorkingDay('2025-02-08'),
       {
         name: 'Qingming Festival',
-        description: `The Qingming Festival (or Ching Ming Festival) is a traditional Chinese holiday where people honor their ancestors by visiting their graves to clean the sites, make offerings, and pay respects, often combined with spring outings to enjoy nature.`,
+        description:
+          'The Qingming Festival (or Ching Ming Festival) is a traditional Chinese holiday where people honor their ancestors by visiting their graves to clean the sites, make offerings, and pay respects, often combined with spring outings to enjoy nature.',
         link: 'https://en.wikipedia.org/wiki/Qingming_Festival',
         dates: [
           {
@@ -65,7 +66,8 @@ export default {
       },
       {
         name: 'Mid-Autumn Festival',
-        description: `The Mid-Autumn Festival is celebrated when the moon is believed to be at its fullest and brightest. In Chinese culture, the full moon symbolizes reunion, making it a central theme of the festival.`,
+        description:
+          'The Mid-Autumn Festival is celebrated when the moon is believed to be at its fullest and brightest. In Chinese culture, the full moon symbolizes reunion, making it a central theme of the festival.',
         link: 'https://en.wikipedia.org/wiki/Mid-Autumn_Festival',
         dates: [
           {

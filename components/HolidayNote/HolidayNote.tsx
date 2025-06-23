@@ -1,6 +1,6 @@
-import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
 
 type Props = {
   show: boolean;

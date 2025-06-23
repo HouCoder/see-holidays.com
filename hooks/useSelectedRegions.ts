@@ -1,6 +1,6 @@
+import { parseAsArrayOf, useQueryState } from 'nuqs';
 import { useGlobalStore } from '@/providers/GlobalStoreProvider';
 import { parseAsRegion } from '@/utils/functions';
-import { parseAsArrayOf, useQueryState } from 'nuqs';
 
 export default function useSelectedRegions() {
   const { selectOptions } = useGlobalStore((state) => state);

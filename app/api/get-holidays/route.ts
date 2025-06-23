@@ -1,10 +1,10 @@
-import { getHolidaysByRegionId } from '@/db/queries/common';
 import { type NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { getHolidaysByRegionId } from '@/db/queries/common';
 
 export const dynamic = 'force-dynamic';
 
-const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
+const _isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
 const validator = z.object({
   region_ids: z
     .string()

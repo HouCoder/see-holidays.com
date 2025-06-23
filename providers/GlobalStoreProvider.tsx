@@ -1,9 +1,9 @@
 'use client';
 
-import type { SelectOption } from '@/db/queries/common';
 import React, { useContext } from 'react';
 import { type StoreApi, useStore } from 'zustand';
 import { createStore } from 'zustand/vanilla';
+import type { SelectOption } from '@/db/queries/common';
 
 export type Holiday = {
   title: string;
@@ -35,7 +35,7 @@ const GlobalStoreProvider = ({
   globalStore: GlobalStore;
 }) => {
   const [store] = React.useState(() =>
-    createStore<GlobalStore>()((set) => globalStore),
+    createStore<GlobalStore>()(() => globalStore),
   );
 
   return (

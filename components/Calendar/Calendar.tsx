@@ -1,9 +1,4 @@
 'use client';
-import useSelectedRegions from '@/hooks/useSelectedRegions';
-import type { Holiday } from '@/providers/GlobalStoreProvider';
-import { useGlobalStore } from '@/providers/GlobalStoreProvider';
-import { useHolidaysStore } from '@/stores/useHolidaysStore';
-import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import FullCalendar from '@fullcalendar/react';
 import { addDays, format, parseISO } from 'date-fns';
@@ -12,6 +7,11 @@ import { parseAsBoolean, useQueryState } from 'nuqs';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import useSelectedRegions from '@/hooks/useSelectedRegions';
+import type { Holiday } from '@/providers/GlobalStoreProvider';
+import { useGlobalStore } from '@/providers/GlobalStoreProvider';
+import { useHolidaysStore } from '@/stores/useHolidaysStore';
+import { useSelectedEventStore } from '@/stores/useSelectedEventStore';
 import styles from './styles.module.scss';
 
 const Calendar = () => {

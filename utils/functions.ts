@@ -1,6 +1,6 @@
-import type { SelectOption } from '@/db/queries/common';
 import { flatMap } from 'lodash';
 import { createParser } from 'nuqs';
+import type { SelectOption } from '@/db/queries/common';
 
 export const parseAsRegion = (selectOptions: SelectOption[]) => {
   const flattenedRegions = flatMap(selectOptions, (item) => {

@@ -22,7 +22,8 @@ export default {
       buildAdditionalWorkingDay('2025-02-08'),
       {
         name: 'Peace Memorial Day',
-        description: `Peace Memorial Day, also known as 228 Memorial Day, is a public holiday in Taiwan for honoring and mourning the victims and families of the February 28 incident in 1947. Proposals to establish Peace Memorial Day as a holiday began in the early 1990s.`,
+        description:
+          'Peace Memorial Day, also known as 228 Memorial Day, is a public holiday in Taiwan for honoring and mourning the victims and families of the February 28 incident in 1947. Proposals to establish Peace Memorial Day as a holiday began in the early 1990s.',
         link: 'https://en.wikipedia.org/wiki/Peace_Memorial_Day',
         dates: [
           {
@@ -40,7 +41,8 @@ export default {
       },
       {
         name: 'Qingming Festival',
-        description: `The Qingming Festival (or Ching Ming Festival) is a traditional Chinese holiday where people honor their ancestors by visiting their graves to clean the sites, make offerings, and pay respects, often combined with spring outings to enjoy nature.`,
+        description:
+          'The Qingming Festival (or Ching Ming Festival) is a traditional Chinese holiday where people honor their ancestors by visiting their graves to clean the sites, make offerings, and pay respects, often combined with spring outings to enjoy nature.',
         link: 'https://en.wikipedia.org/wiki/Qingming_Festival',
         dates: [
           {
@@ -108,7 +110,8 @@ export default {
       },
       {
         name: 'Mid-Autumn Festival',
-        description: `The Mid-Autumn Festival is celebrated when the moon is believed to be at its fullest and brightest. In Chinese culture, the full moon symbolizes reunion, making it a central theme of the festival.`,
+        description:
+          'The Mid-Autumn Festival is celebrated when the moon is believed to be at its fullest and brightest. In Chinese culture, the full moon symbolizes reunion, making it a central theme of the festival.',
         link: 'https://en.wikipedia.org/wiki/Mid-Autumn_Festival',
         dates: [
           {
@@ -118,7 +121,8 @@ export default {
       },
       {
         name: 'National Day',
-        description: `The National Day of the Republic of China, also referred to as Double Ten Day or Double Tenth Day, is a public holiday on 10 October, now held annually as national day in the Republic of China.`,
+        description:
+          'The National Day of the Republic of China, also referred to as Double Ten Day or Double Tenth Day, is a public holiday on 10 October, now held annually as national day in the Republic of China.',
         link: 'https://en.wikipedia.org/wiki/National_Day_of_the_Republic_of_China',
         dates: [
           {
@@ -136,7 +140,8 @@ export default {
       },
       {
         name: 'Retrocession Day',
-        description: `Retrocession Day is the annual observance and a public holiday in Taiwan commemorating the end of Japanese rule of Taiwan and Penghu and the claimed return of Taiwan to the Republic of China on 25 October 1945.`,
+        description:
+          'Retrocession Day is the annual observance and a public holiday in Taiwan commemorating the end of Japanese rule of Taiwan and Penghu and the claimed return of Taiwan to the Republic of China on 25 October 1945.',
         link: 'https://en.wikipedia.org/wiki/Retrocession_Day',
         dates: [
           {
@@ -146,7 +151,8 @@ export default {
       },
       {
         name: 'Constitution Day',
-        description: `Coincides with Christmas, and the anniversary of the 1947 ROC Constitution.`,
+        description:
+          'Coincides with Christmas, and the anniversary of the 1947 ROC Constitution.',
         link: 'https://en.wikipedia.org/wiki/Constitution_Day_of_the_Republic_of_China',
         dates: [
           {

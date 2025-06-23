@@ -1,12 +1,12 @@
 'use client';
 
-import Calendar from '@/components/Calendar/Calendar';
-import HolidaysInYear from '@/components/HolidaysInYear/HolidaysInYear';
-import RegionSelect from '@/components/RegionSelect/RegionSelect';
 import { Suspense } from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Calendar from '@/components/Calendar/Calendar';
+import HolidaysInYear from '@/components/HolidaysInYear/HolidaysInYear';
+import RegionSelect from '@/components/RegionSelect/RegionSelect';
 
 export default function Home() {
   return (

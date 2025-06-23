@@ -1,5 +1,5 @@
-import type { IpDetails } from '@/utils/ip';
 import { Redis } from '@upstash/redis';
+import type { IpDetails } from '@/utils/ip';
 
 let client: Redis | null = null;
 

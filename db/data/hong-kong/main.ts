@@ -19,7 +19,8 @@ export default {
       },
       {
         name: 'Ching Ming Festival',
-        description: `The Qingming Festival (or Ching Ming Festival) is a traditional Chinese holiday where people honor their ancestors by visiting their graves to clean the sites, make offerings, and pay respects, often combined with spring outings to enjoy nature.`,
+        description:
+          'The Qingming Festival (or Ching Ming Festival) is a traditional Chinese holiday where people honor their ancestors by visiting their graves to clean the sites, make offerings, and pay respects, often combined with spring outings to enjoy nature.',
         link: 'https://en.wikipedia.org/wiki/Qingming_Festival',
         dates: [
           {
@@ -40,7 +41,8 @@ export default {
       },
       {
         name: 'Easter Monday',
-        description: `Easter Monday is the second day of Eastertide and a public holiday in more than 50 predominantly Christian countries. In Western Christianity it marks the second day of the Octave of Easter; in Eastern Christianity it marks the second day of Bright Week.`,
+        description:
+          'Easter Monday is the second day of Eastertide and a public holiday in more than 50 predominantly Christian countries. In Western Christianity it marks the second day of the Octave of Easter; in Eastern Christianity it marks the second day of Bright Week.',
         link: 'https://en.wikipedia.org/wiki/Easter_Monday',
         dates: [
           {
@@ -68,7 +70,8 @@ export default {
       },
       {
         name: 'Tuen Ng Festival',
-        description: `Tuen Ng Festival, also known as the Dragon Boat Festival, is the 5th day of the 5th month of the Lunar calendar. It goes with the traditional dragon boat racing with its origin dating back over 2,200 years ago.`,
+        description:
+          'Tuen Ng Festival, also known as the Dragon Boat Festival, is the 5th day of the 5th month of the Lunar calendar. It goes with the traditional dragon boat racing with its origin dating back over 2,200 years ago.',
         link: 'https://en.wikipedia.org/wiki/Dragon_Boat_Festival',
         dates: [
           {
@@ -78,7 +81,8 @@ export default {
       },
       {
         name: 'Hong Kong Special Administrative Region Establishment Day',
-        description: `Establishment Day, formally the Hong Kong Special Administrative Region Establishment Day, is celebrated annually on 1 July in Hong Kong, China since 1997.`,
+        description:
+          'Establishment Day, formally the Hong Kong Special Administrative Region Establishment Day, is celebrated annually on 1 July in Hong Kong, China since 1997.',
         link: 'https://en.wikipedia.org/wiki/Hong_Kong_Special_Administrative_Region_Establishment_Day',
         dates: [
           {
@@ -108,7 +112,8 @@ export default {
       },
       {
         name: 'Chung Yeung Festival',
-        description: `The Chung Yeung Festival is a public holiday in Hong Kong during which families visit the graves of their ancestors to pay respects and perform rituals, reflecting traditional Chinese values of filial piety and ancestor remembrance. It typically falls on the ninth day of the ninth lunar month.`,
+        description:
+          'The Chung Yeung Festival is a public holiday in Hong Kong during which families visit the graves of their ancestors to pay respects and perform rituals, reflecting traditional Chinese values of filial piety and ancestor remembrance. It typically falls on the ninth day of the ninth lunar month.',
         link: 'https://en.wikipedia.org/wiki/Double_Ninth_Festival',
         dates: [
           {

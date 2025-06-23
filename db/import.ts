@@ -35,7 +35,7 @@ type Holiday = {
   dates: Date[];
 };
 
-async function deleteTables() {
+async function _deleteTables() {
   await dbClient.delete(dateTable);
   await dbClient.delete(holidayTable);
   await dbClient.delete(regionTable);
@@ -121,6 +121,7 @@ async function insertRegions(countryIdMap: IdMap) {
 async function insertHolidaysAndDates(regionIdMap: IdMap) {
   const allRegions: Record<string, Holiday[]> = collection.reduce(
     (acc, country) => {
+      // biome-ignore lint/performance/noAccumulatingSpread: Minor issue
       return Object.assign(acc, country.regions);
     },
     {},

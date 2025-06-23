@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import {
@@ -7,8 +9,6 @@ import {
 } from '@/db/queries/common';
 import GlobalStoreProvider from '@/providers/GlobalStoreProvider';
 import PostHogProvider from '@/providers/PostHogProvider';
-import type { Metadata } from 'next';
-import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import '@/styles/app.scss';
 
 export const metadata: Metadata = {

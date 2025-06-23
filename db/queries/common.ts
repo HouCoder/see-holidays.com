@@ -1,9 +1,9 @@
+import { asc, eq, inArray } from 'drizzle-orm';
 import db from '@/db/client';
 import { country } from '@/db/schema/country';
 import { date } from '@/db/schema/date';
 import { holiday } from '@/db/schema/holiday';
 import { region } from '@/db/schema/region';
-import { asc, eq, inArray } from 'drizzle-orm';
 
 export const getHolidaysByRegionId = async (regionIds: number[]) => {
   return await db

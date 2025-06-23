@@ -1,7 +1,7 @@
-import { getIpDetails } from '@/utils/ip';
 import { ipAddress } from '@vercel/functions';
-import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
+import { getIpDetails } from '@/utils/ip';
 
 // Only run on public routes (skip _next, api, static, etc)
 export const config = {

@@ -34,7 +34,8 @@ export default {
   },
   labourDay: {
     name: 'Labour Day',
-    description: `Labour Day is an annual day of celebration of the labour movement and its achievements. It has its origins in the labour union movement, specifically the eight-hour day movement, which advocated eight hours for work, eight hours for recreation, and eight hours for rest.`,
+    description:
+      'Labour Day is an annual day of celebration of the labour movement and its achievements. It has its origins in the labour union movement, specifically the eight-hour day movement, which advocated eight hours for work, eight hours for recreation, and eight hours for rest.',
     link: 'https://en.wikipedia.org/wiki/Labour_Day',
   },
   christmasDay: {
@@ -50,7 +51,8 @@ export default {
   },
   boxingDay: {
     name: 'Boxing Day',
-    description: `Boxing Day, also called as Offering Day is a holiday celebrated after Christmas Day, occurring on the second day of Christmastide. Boxing Day was once a day to donate gifts to those in need, but it has evolved to become a part of Christmas festivities, with many people choosing to shop for deals on Boxing Day.`,
+    description:
+      'Boxing Day, also called as Offering Day is a holiday celebrated after Christmas Day, occurring on the second day of Christmastide. Boxing Day was once a day to donate gifts to those in need, but it has evolved to become a part of Christmas festivities, with many people choosing to shop for deals on Boxing Day.',
     link: 'https://en.wikipedia.org/wiki/Boxing_Day',
     dates: [
       {

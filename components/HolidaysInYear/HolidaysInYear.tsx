@@ -1,7 +1,7 @@
 'use client';
+import Accordion from 'react-bootstrap/Accordion';
 import useSelectedRegions from '@/hooks/useSelectedRegions';
 import { useGlobalStore } from '@/providers/GlobalStoreProvider';
-import Accordion from 'react-bootstrap/Accordion';
 
 const HolidaysInYear = () => {
   const currentYear = new Date().getFullYear();
