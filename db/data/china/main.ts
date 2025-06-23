@@ -1,4 +1,4 @@
-import commonHolidays, { buildSpecialWorkingDay } from '../common';
+import commonHolidays, { buildAdditionalWorkingDay } from '../common';
 
 export default {
   emoji: '🇨🇳',
@@ -6,7 +6,7 @@ export default {
   regions: {
     China: [
       commonHolidays.newYearsDay,
-      buildSpecialWorkingDay('2025-01-26'),
+      buildAdditionalWorkingDay('2025-01-26'),
       {
         ...commonHolidays.chineseNewYear,
         dates: [
@@ -16,7 +16,7 @@ export default {
           },
         ],
       },
-      buildSpecialWorkingDay('2025-02-08'),
+      buildAdditionalWorkingDay('2025-02-08'),
       {
         name: 'Qingming Festival',
         description: `The Qingming Festival (or Ching Ming Festival) is a traditional Chinese holiday where people honor their ancestors by visiting their graves to clean the sites, make offerings, and pay respects, often combined with spring outings to enjoy nature.`,
@@ -28,11 +28,9 @@ export default {
           },
         ],
       },
-      buildSpecialWorkingDay('2025-04-27'),
+      buildAdditionalWorkingDay('2025-04-27'),
       {
-        name: 'Labour Day',
-        description: `Labour Day is an annual day of celebration of the labour movement and its achievements. It has its origins in the labour union movement, specifically the eight-hour day movement, which advocated eight hours for work, eight hours for recreation, and eight hours for rest.`,
-        link: 'https://en.wikipedia.org/wiki/Labour_Day',
+        ...commonHolidays.labourDay,
         dates: [
           {
             startDate: '2025-05-01',
@@ -52,7 +50,7 @@ export default {
           },
         ],
       },
-      buildSpecialWorkingDay('2025-09-28'),
+      buildAdditionalWorkingDay('2025-09-28'),
       {
         name: 'National Day',
         description:
@@ -75,7 +73,7 @@ export default {
           },
         ],
       },
-      buildSpecialWorkingDay('2025-10-11'),
+      buildAdditionalWorkingDay('2025-10-11'),
     ],
   },
 };

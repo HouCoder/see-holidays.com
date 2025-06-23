@@ -27,20 +27,9 @@ export default {
           },
         ],
       },
+      commonHolidays.goodFriday,
       {
-        name: 'Good Friday',
-        description: `Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.`,
-        link: 'https://en.wikipedia.org/wiki/Good_Friday',
-        dates: [
-          {
-            startDate: '2025-04-18',
-          },
-        ],
-      },
-      {
-        name: 'Labour Day',
-        description: `In Singapore, Labour Day, also known as May Day, is celebrated on May 1st as a public holiday to commemorate the contributions of workers. It's a day for solidarity and recognition of the workforce.`,
-        link: 'https://en.wikipedia.org/wiki/Labour_Day_(Singapore)',
+        ...commonHolidays.labourDay,
         dates: [
           {
             startDate: '2025-05-01',
@@ -97,17 +86,7 @@ export default {
           },
         ],
       },
-      {
-        name: 'Christmas Day',
-        description:
-          'Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.',
-        link: 'https://en.wikipedia.org/wiki/Christmas',
-        dates: [
-          {
-            startDate: '2025-12-25',
-          },
-        ],
-      },
+      commonHolidays.christmasDay,
     ],
   },
 };

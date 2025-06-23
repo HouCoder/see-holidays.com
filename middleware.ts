@@ -38,6 +38,9 @@ export async function middleware(request: NextRequest) {
     'Singapore',
     'Hong Kong',
     'Taiwan',
+    'Auckland',
+    'Canterbury',
+    'Wellington',
   ];
 
   if (

@@ -33,11 +33,11 @@
   - [x] Hong Kong
   - [x] Taiwan
   - [x] Singapore
+  - [x] New Zealand
   - [ ] Japan
   - [ ] South Korea
   - [ ] Malaysia
   - [ ] Philippines
-  - [ ] New Zealand
 - [ ] Paid Plans
   - [ ] No ads
   - [ ] Holiday API

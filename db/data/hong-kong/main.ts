@@ -27,17 +27,7 @@ export default {
           },
         ],
       },
-      {
-        name: 'Good Friday',
-        description:
-          'Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.',
-        link: 'https://en.wikipedia.org/wiki/Good_Friday',
-        dates: [
-          {
-            startDate: '2025-04-18',
-          },
-        ],
-      },
+      commonHolidays.goodFriday,
       {
         name: 'The day following Good Friday',
         description: `"The day following Good Friday" as a public holiday in Hong Kong originated during British colonial rule, where it was established to extend the traditional Easter holiday period, allowing people more time for religious observance and family gatherings. This practice reflects a blend of British Christian customs and local societal needs.`,
@@ -59,9 +49,7 @@ export default {
         ],
       },
       {
-        name: 'Labour Day',
-        description: `Labour Day is an annual day of celebration of the labour movement and its achievements. It has its origins in the labour union movement, specifically the eight-hour day movement, which advocated eight hours for work, eight hours for recreation, and eight hours for rest.`,
-        link: 'https://en.wikipedia.org/wiki/Labour_Day',
+        ...commonHolidays.labourDay,
         dates: [
           {
             startDate: '2025-05-01',
@@ -128,27 +116,8 @@ export default {
           },
         ],
       },
-      {
-        name: 'Christmas Day',
-        description:
-          'Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.',
-        link: 'https://en.wikipedia.org/wiki/Christmas',
-        dates: [
-          {
-            startDate: '2025-12-25',
-          },
-        ],
-      },
-      {
-        name: 'The first weekday after Christmas Day',
-        description: `Boxing Day, also called as Offering Day is a holiday celebrated after Christmas Day, occurring on the second day of Christmastide. Boxing Day was once a day to donate gifts to those in need, but it has evolved to become a part of Christmas festivities, with many people choosing to shop for deals on Boxing Day`,
-        link: 'https://en.wikipedia.org/wiki/Boxing_Day',
-        dates: [
-          {
-            startDate: '2025-12-26',
-          },
-        ],
-      },
+      commonHolidays.christmasDay,
+      commonHolidays.boxingDay,
     ],
   },
 };

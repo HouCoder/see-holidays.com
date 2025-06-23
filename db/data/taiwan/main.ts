@@ -1,5 +1,5 @@
 // https://calendar.talllkai.com/2025
-import commonHolidays, { buildSpecialWorkingDay } from '../common';
+import commonHolidays, { buildAdditionalWorkingDay } from '../common';
 
 export default {
   emoji: '🇹🇼',
@@ -19,7 +19,7 @@ export default {
           },
         ],
       },
-      buildSpecialWorkingDay('2025-02-08'),
+      buildAdditionalWorkingDay('2025-02-08'),
       {
         name: 'Peace Memorial Day',
         description: `Peace Memorial Day, also known as 228 Memorial Day, is a public holiday in Taiwan for honoring and mourning the victims and families of the February 28 incident in 1947. Proposals to establish Peace Memorial Day as a holiday began in the early 1990s.`,
@@ -60,12 +60,10 @@ export default {
       },
       /*
       {
-        name: 'Labour Day', // Only available from 2026
-        description: `Labour Day is an annual day of celebration of the labour movement and its achievements. It has its origins in the labour union movement, specifically the eight-hour day movement, which advocated eight hours for work, eight hours for recreation, and eight hours for rest.`,
-        link: 'https://en.wikipedia.org/wiki/Labour_Day',
+        ...commonHolidays.labourDay, // Only available from 2026
         dates: [
           {
-            startDate: '2025-05-01',
+            startDate: '2026-05-01',
           },
         ],
       },

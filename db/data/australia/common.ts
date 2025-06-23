@@ -13,17 +13,7 @@ export default {
       },
     ],
   },
-  goodFriday: {
-    name: 'Good Friday',
-    description:
-      'Good Friday, also known as Holy Friday, Great Friday, Great and Holy Friday, or Friday of the Passion of the Lord, is a solemn Christian holy day commemorating the crucifixion of Jesus and his death at Calvary.',
-    link: 'https://en.wikipedia.org/wiki/Good_Friday',
-    dates: [
-      {
-        startDate: '2025-04-18',
-      },
-    ],
-  },
+  goodFriday: commonHolidays.goodFriday,
   easter: {
     name: 'Easter',
     description:
@@ -59,36 +49,13 @@ export default {
     ],
   },
   labourDay: {
-    name: 'Labour Day',
-    description:
-      'Labour Day is a public holiday observed on varying dates across Australian states and territories to honor the achievements of the labour movement and workers, often marked by parades, community events and a long weekend.',
-    link: 'https://en.wikipedia.org/wiki/Labour_Day',
+    ...commonHolidays.labourDay,
     dates: [
       {
         startDate: '2025-10-06',
       },
     ],
   },
-  christmasDay: {
-    name: 'Christmas Day',
-    description:
-      'Christmas Day is celebrated on December 25th to honor the birth of Jesus Christ and is observed worldwide with religious services, family gatherings, gift exchanges and festive meals.',
-    link: 'https://en.wikipedia.org/wiki/Christmas',
-    dates: [
-      {
-        startDate: '2025-12-25',
-      },
-    ],
-  },
-  boxingDay: {
-    name: 'Boxing Day',
-    description:
-      'Boxing Day, observed on December 26th in Australia and other Commonwealth countries, began as a tradition of giving “Christmas boxes” to service workers and the needy and today is marked by a public holiday, major retail sales and sporting events.',
-    link: 'https://en.wikipedia.org/wiki/Boxing_Day',
-    dates: [
-      {
-        startDate: '2025-12-26',
-      },
-    ],
-  },
+  christmasDay: commonHolidays.christmasDay,
+  boxingDay: commonHolidays.boxingDay,
 };
