@@ -4,8 +4,11 @@ import dbClient from './client';
 import australia from './data/australia/main';
 import china from './data/china/main';
 import hongKong from './data/hong-kong/main';
+import japan from './data/japan/main';
+import macao from './data/macao/main';
 import newZealand from './data/new-zealand/main';
 import singapore from './data/singapore/main';
+import southKorea from './data/south-korea/main';
 import taiwan from './data/taiwan/main';
 import { country as countryTable } from './schema/country';
 import { date as dateTable } from './schema/date';
@@ -19,6 +22,9 @@ const collection = [
   hongKong,
   taiwan,
   newZealand,
+  macao,
+  japan,
+  southKorea,
 ] as const;
 
 type IdMap = Record<string, number>;

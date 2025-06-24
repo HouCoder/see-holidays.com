@@ -1,14 +1,16 @@
-import commonHolidays, { buildAdditionalWorkingDay } from '../common';
+import globalCommonHolidays, {
+  buildAdditionalWorkingDay,
+} from '../global-common';
 
 export default {
   emoji: '🇨🇳',
   country: 'China',
   regions: {
     China: [
-      commonHolidays.newYearsDay,
+      globalCommonHolidays.newYearsDay,
       buildAdditionalWorkingDay('2025-01-26'),
       {
-        ...commonHolidays.chineseNewYear,
+        ...globalCommonHolidays.chineseNewYear,
         dates: [
           {
             startDate: '2025-01-28',
@@ -31,7 +33,7 @@ export default {
       },
       buildAdditionalWorkingDay('2025-04-27'),
       {
-        ...commonHolidays.labourDay,
+        ...globalCommonHolidays.labourDay,
         dates: [
           {
             startDate: '2025-05-01',

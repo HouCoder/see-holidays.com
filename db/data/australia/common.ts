@@ -1,7 +1,7 @@
-import commonHolidays from '../common';
+import globalCommonHolidays from '../global-common';
 
 export default {
-  newYearsDay: commonHolidays.newYearsDay,
+  newYearsDay: globalCommonHolidays.newYearsDay,
   australiaDay: {
     name: 'Australia Day',
     description:
@@ -13,7 +13,7 @@ export default {
       },
     ],
   },
-  goodFriday: commonHolidays.goodFriday,
+  goodFriday: globalCommonHolidays.goodFriday,
   easter: {
     name: 'Easter',
     description:
@@ -49,13 +49,13 @@ export default {
     ],
   },
   labourDay: {
-    ...commonHolidays.labourDay,
+    ...globalCommonHolidays.labourDay,
     dates: [
       {
         startDate: '2025-10-06',
       },
     ],
   },
-  christmasDay: commonHolidays.christmasDay,
-  boxingDay: commonHolidays.boxingDay,
+  christmasDay: globalCommonHolidays.christmasDay,
+  boxingDay: globalCommonHolidays.boxingDay,
 };

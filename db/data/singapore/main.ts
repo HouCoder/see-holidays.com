@@ -1,15 +1,15 @@
 // https://www.mom.gov.sg/employment-practices/public-holidays
 
-import commonHolidays from '../common';
+import globalCommonHolidays from '../global-common';
 
 export default {
   emoji: '🇸🇬',
   country: 'Singapore',
   regions: {
     Singapore: [
-      commonHolidays.newYearsDay,
+      globalCommonHolidays.newYearsDay,
       {
-        ...commonHolidays.chineseNewYear,
+        ...globalCommonHolidays.chineseNewYear,
         dates: [
           {
             startDate: '2025-01-29',
@@ -27,9 +27,9 @@ export default {
           },
         ],
       },
-      commonHolidays.goodFriday,
+      globalCommonHolidays.goodFriday,
       {
-        ...commonHolidays.labourDay,
+        ...globalCommonHolidays.labourDay,
         dates: [
           {
             startDate: '2025-05-01',
@@ -91,7 +91,7 @@ export default {
           },
         ],
       },
-      commonHolidays.christmasDay,
+      globalCommonHolidays.christmasDay,
     ],
   },
 };

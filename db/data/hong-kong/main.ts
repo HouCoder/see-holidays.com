@@ -1,15 +1,15 @@
 // https://www.mom.gov.sg/employment-practices/public-holidays
 
-import commonHolidays from '../common';
+import globalCommonHolidays from '../global-common';
 
 export default {
   emoji: '🇭🇰',
   country: 'Hong Kong',
   regions: {
     'Hong Kong': [
-      commonHolidays.newYearsDay,
+      globalCommonHolidays.newYearsDay,
       {
-        ...commonHolidays.chineseNewYear,
+        ...globalCommonHolidays.chineseNewYear,
         dates: [
           {
             startDate: '2025-01-29',
@@ -28,7 +28,7 @@ export default {
           },
         ],
       },
-      commonHolidays.goodFriday,
+      globalCommonHolidays.goodFriday,
       {
         name: 'The day following Good Friday',
         description: `"The day following Good Friday" as a public holiday in Hong Kong originated during British colonial rule, where it was established to extend the traditional Easter holiday period, allowing people more time for religious observance and family gatherings. This practice reflects a blend of British Christian customs and local societal needs.`,
@@ -51,7 +51,7 @@ export default {
         ],
       },
       {
-        ...commonHolidays.labourDay,
+        ...globalCommonHolidays.labourDay,
         dates: [
           {
             startDate: '2025-05-01',
@@ -121,8 +121,8 @@ export default {
           },
         ],
       },
-      commonHolidays.christmasDay,
-      commonHolidays.boxingDay,
+      globalCommonHolidays.christmasDay,
+      globalCommonHolidays.boxingDay,
     ],
   },
 };

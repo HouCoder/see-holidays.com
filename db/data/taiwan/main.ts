@@ -1,5 +1,7 @@
 // https://calendar.talllkai.com/2025
-import commonHolidays, { buildAdditionalWorkingDay } from '../common';
+import globalCommonHolidays, {
+  buildAdditionalWorkingDay,
+} from '../global-common';
 
 export default {
   emoji: '🇹🇼',
@@ -9,9 +11,9 @@ export default {
   },
   regions: {
     Taiwan: [
-      commonHolidays.newYearsDay,
+      globalCommonHolidays.newYearsDay,
       {
-        ...commonHolidays.chineseNewYear,
+        ...globalCommonHolidays.chineseNewYear,
         dates: [
           {
             startDate: '2025-01-27',
@@ -32,7 +34,7 @@ export default {
         ],
       },
       {
-        ...commonHolidays.additionalHoliday,
+        ...globalCommonHolidays.additionalHoliday,
         dates: [
           {
             startDate: '2025-04-03',
@@ -62,7 +64,7 @@ export default {
       },
       /*
       {
-        ...commonHolidays.labourDay, // Only available from 2026
+        ...globalCommonHolidays.labourDay, // Only available from 2026
         dates: [
           {
             startDate: '2026-05-01',
@@ -71,7 +73,7 @@ export default {
       },
       */
       {
-        ...commonHolidays.additionalHoliday,
+        ...globalCommonHolidays.additionalHoliday,
         dates: [
           {
             startDate: '2025-05-30',
@@ -101,7 +103,7 @@ export default {
         ],
       },
       {
-        ...commonHolidays.additionalHoliday,
+        ...globalCommonHolidays.additionalHoliday,
         dates: [
           {
             startDate: '2025-09-29',
@@ -131,7 +133,7 @@ export default {
         ],
       },
       {
-        ...commonHolidays.additionalHoliday,
+        ...globalCommonHolidays.additionalHoliday,
         dates: [
           {
             startDate: '2025-10-24',

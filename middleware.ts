@@ -11,7 +11,7 @@ export const config = {
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
 
-  // 1) If they already have ?regions=xxx, don’t redirect again
+  // If they already have ?regions=xxx, don’t redirect again
   if (url.searchParams.has('regions')) {
     return NextResponse.next();
   }
@@ -27,6 +27,13 @@ export async function middleware(request: NextRequest) {
   const ipDetails = await getIpDetails(pureIp);
   const supportedRegions = [
     'China',
+    'Hong Kong',
+    'Taiwan',
+    'Singapore',
+    'Japan',
+    'South Korea',
+
+    // Australia states
     'South Australia',
     'New South Wales',
     'Western Australia',
@@ -35,9 +42,8 @@ export async function middleware(request: NextRequest) {
     'Victoria',
     'Queensland',
     'Australian Capital Territory',
-    'Singapore',
-    'Hong Kong',
-    'Taiwan',
+
+    // New Zealand
     'Auckland',
     'Canterbury',
     'Wellington',

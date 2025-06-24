@@ -1,7 +1,7 @@
-import commonGlobalHolidays from '../common';
+import globalCommonHolidays from '../global-common';
 
 export default [
-  commonGlobalHolidays.newYearsDay,
+  globalCommonHolidays.newYearsDay,
   {
     name: "Day after New Year's Day",
     description:
@@ -24,7 +24,7 @@ export default [
       },
     ],
   },
-  commonGlobalHolidays.goodFriday,
+  globalCommonHolidays.goodFriday,
   {
     name: 'Easter Monday',
     description:
@@ -80,6 +80,6 @@ export default [
       },
     ],
   },
-  commonGlobalHolidays.christmasDay,
-  commonGlobalHolidays.boxingDay,
+  globalCommonHolidays.christmasDay,
+  globalCommonHolidays.boxingDay,
 ];

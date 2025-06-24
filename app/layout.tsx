@@ -12,9 +12,9 @@ import PostHogProvider from '@/providers/PostHogProvider';
 import '@/styles/app.scss';
 
 export const metadata: Metadata = {
-  title: 'SeeHolidays – Interactive Holiday Calendar',
+  title: 'See Holidays: Your Guide to Official Public Holiday Calendars',
   description:
-    'Discover public & regional holidays worldwide with SeeHolidays.com. Browse by country or state, plan work and vacations, never miss a celebration!',
+    'See Holidays is your simple guide to official public holidays worldwide. Our easy-to-use calendar helps you track international holidays for seamless business and travel planning.',
 };
 
 export default async function RootLayout({
