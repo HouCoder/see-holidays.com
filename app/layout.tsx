@@ -8,7 +8,6 @@ import {
   getSelectOptions,
 } from '@/db/queries/common';
 import GlobalStoreProvider from '@/providers/GlobalStoreProvider';
-import PostHogProvider from '@/providers/PostHogProvider';
 import '@/styles/app.scss';
 
 export const metadata: Metadata = {
@@ -29,19 +28,17 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        <PostHogProvider>
-          <GlobalStoreProvider
-            globalStore={{
-              holidays,
-              selectOptions,
-              regionEmojiMap,
-            }}
-          >
-            <Header />
-            <NuqsAdapter>{children}</NuqsAdapter>
-            <Footer />
-          </GlobalStoreProvider>
-        </PostHogProvider>
+        <GlobalStoreProvider
+          globalStore={{
+            holidays,
+            selectOptions,
+            regionEmojiMap,
+          }}
+        >
+          <Header />
+          <NuqsAdapter>{children}</NuqsAdapter>
+          <Footer />
+        </GlobalStoreProvider>
       </body>
     </html>
   );
