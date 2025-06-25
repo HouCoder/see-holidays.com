@@ -27,6 +27,15 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="See Holidays" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/mobile-icon-512x512.png"
+        />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body>
         <GlobalStoreProvider
           globalStore={{
