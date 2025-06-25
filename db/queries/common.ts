@@ -144,3 +144,23 @@ export const getRegionEmojiMap = async () => {
 
   return map;
 };
+
+export const getRegionByName = async (regionName: string) => {
+  return await db.select().from(region).where(eq(region.name, regionName));
+};
+
+export const getHolidaysByRegionName = async (regionName: string) => {
+  return await db
+    .select({
+      holidayName: holiday.name,
+      startDate: date.startDate,
+      endDate: date.endDate,
+      isWorkingDay: date.isWorkingDay,
+    })
+    .from(region)
+    .innerJoin(holiday, eq(region.id, holiday.regionId))
+    .innerJoin(date, eq(holiday.id, date.holidayId))
+    .where(eq(region.name, regionName))
+    .orderBy(asc(date.startDate))
+    .all();
+};
