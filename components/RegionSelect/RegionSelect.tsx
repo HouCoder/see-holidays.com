@@ -72,6 +72,7 @@ const RegionSelect = () => {
       <Select
         isMulti
         options={selectOptions}
+        isSearchable={false}
         defaultValue={queryRegions}
         components={{ MultiValueLabel }}
         classNamePrefix="react-select"

@@ -43,3 +43,7 @@
   - [ ] Holiday API
   - [ ] Slack/Email notification
   - [ ] Google Calendar subscription
+
+## Links
+
+1. https://mantine.dev/

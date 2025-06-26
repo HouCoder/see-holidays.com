@@ -24,6 +24,7 @@ const Header = () => {
         <NavbarToggle aria-controls={id} />
         <NavbarCollapse id={id}>
           <Nav className="ms-auto">
+            <NavLink href="/api">Holiday API</NavLink>
             <NavLink href="https://forms.gle/KdGcTnig71GCmkhf7">
               Contact us
             </NavLink>
