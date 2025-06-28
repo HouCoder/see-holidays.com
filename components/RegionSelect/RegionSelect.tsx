@@ -1,5 +1,6 @@
 'use client';
 
+import Cookies from 'js-cookie';
 import { parseAsArrayOf, parseAsBoolean, useQueryState } from 'nuqs';
 import { useEffect, useId } from 'react';
 import FormCheck from 'react-bootstrap/FormCheck';
@@ -90,8 +91,20 @@ const RegionSelect = () => {
             themes[region.value] = REGION_COLORS[index];
           });
 
+          console.log(validRegions);
           setQueryRegions(validRegions);
           setHolidayThemes(themes);
+
+          if (validRegions.length === 0) {
+            Cookies.remove('regions');
+          } else {
+            const cookieValue = validRegions.map((r) => r.label).join(',');
+
+            Cookies.set('regions', cookieValue, {
+              expires: 365,
+              path: '/',
+            });
+          }
         }}
       />
       <FormCheck

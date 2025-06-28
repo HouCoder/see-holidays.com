@@ -7,7 +7,8 @@ export default function ApiPage() {
     <Container>
       <h1>APIs</h1>
       <p>
-        This page contains all the APIs available on seeholidays.com, you can use them in your own App.
+        This page contains all the APIs available on seeholidays.com, you can
+        use them in your own App.
       </p>
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
@@ -58,15 +59,7 @@ export default function ApiPage() {
               </tbody>
             </table>
             <h5>Example</h5>
-            <p>
-              <a
-                href="/api/is-holiday?regionName=Victoria&date=2025-12-25"
-                target="_blank"
-                rel="noopener"
-              >
-                /api/is-holiday?regionName=Victoria&date=2025-12-25
-              </a>
-            </p>
+            <p>/api/is-holiday?regionName=Victoria&date=2025-12-25</p>
             <h5>Response</h5>
             <pre>
               <code>

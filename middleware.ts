@@ -8,18 +8,42 @@ export const config = {
   matcher: ['/((?!_next|api|static|favicon.ico).*)'],
 };
 
+const cookieOptions = {
+  maxAge: 60 * 60 * 24 * 365, // 1 year
+  path: '/',
+} as const;
+
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
+  const response = NextResponse.next();
 
   // If they already have ?regions=xxx, don’t redirect again
-  if (url.searchParams.has('regions')) {
-    return NextResponse.next();
+  const regionsInQuery = url.searchParams.get('regions');
+
+  if (regionsInQuery !== null) {
+    response.cookies.set({
+      name: 'regions',
+      value: regionsInQuery,
+      ...cookieOptions,
+    });
+
+    return response;
   }
 
+  // If they already have regions set in cookie, redirect based on the cookie values
+  const regionsInCookie = request.cookies.get('regions')?.value;
+
+  if (regionsInCookie !== undefined) {
+    url.searchParams.set('regions', regionsInCookie);
+
+    return NextResponse.redirect(url);
+  }
+
+  // Redirect based on IP
   const ip = ipAddress(request) || request.headers.get('x-forwarded-for');
 
   if (!ip) {
-    return NextResponse.next();
+    return response;
   }
 
   // ::ffff:192.168.21.159 -> 192.168.21.159
@@ -55,14 +79,30 @@ export async function middleware(request: NextRequest) {
   ) {
     url.searchParams.set('regions', ipDetails.subdivision);
 
-    return NextResponse.redirect(url);
+    const redirect = NextResponse.redirect(url);
+
+    redirect.cookies.set({
+      name: 'regions',
+      value: ipDetails.subdivision,
+      ...cookieOptions,
+    });
+
+    return redirect;
   }
 
   if (ipDetails.country && supportedRegions.includes(ipDetails.country)) {
     url.searchParams.set('regions', ipDetails.country);
 
-    return NextResponse.redirect(url);
+    const redirect = NextResponse.redirect(url);
+
+    redirect.cookies.set({
+      name: 'regions',
+      value: ipDetails.country,
+      ...cookieOptions,
+    });
+
+    return redirect;
   }
 
-  return NextResponse.next();
+  return response;
 }
