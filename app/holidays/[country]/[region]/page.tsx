@@ -5,10 +5,10 @@ import { getCounties, getRegions } from '@/db/queries/common';
 import { codefyString } from '@/utils/functions';
 
 type RegionPageProps = {
-  params: {
+  params: Promise<{
     country: string;
     region: string;
-  };
+  }>;
 };
 
 const getCountryDetailsByCode = async (countryCode: string) => {

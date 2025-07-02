@@ -5,9 +5,9 @@ import { getCounties, getRegionsByCountryId } from '@/db/queries/common';
 import { codefyString } from '@/utils/functions';
 
 type CountryPageProps = {
-  params: {
+  params: Promise<{
     country: string;
-  };
+  }>;
 };
 
 const getCountryDetailsByCode = async (countryCode: string) => {
@@ -20,7 +20,7 @@ const getCountryDetailsByCode = async (countryCode: string) => {
 };
 
 export const generateMetadata = async ({ params }: CountryPageProps) => {
-  const { country } = params;
+  const { country } = await params;
   const countryDetails = await getCountryDetailsByCode(country);
 
   if (!countryDetails) {
@@ -45,7 +45,7 @@ export const generateMetadata = async ({ params }: CountryPageProps) => {
 };
 
 const CountryPage = async ({ params }: CountryPageProps) => {
-  const { country } = params;
+  const { country } = await params;
   const countryDetails = await getCountryDetailsByCode(country);
 
   if (!countryDetails) {
