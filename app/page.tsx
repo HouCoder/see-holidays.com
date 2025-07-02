@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Calendar from '@/components/Calendar/Calendar';
-import HolidaysInYear from '@/components/HolidaysInYear/HolidaysInYear';
+import HolidaysInYearTiny from '@/components/HolidaysInYearTiny/HolidaysInYearTiny';
 import RegionSelect from '@/components/RegionSelect/RegionSelect';
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         <Row>
           <Col className="col-lg-3 col-12">
             <RegionSelect />
-            <HolidaysInYear />
+            <HolidaysInYearTiny />
           </Col>
           <Col className="col-lg-9 col-12">
             <Calendar />

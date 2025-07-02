@@ -5,7 +5,7 @@ import { getIpDetails } from '@/utils/ip';
 
 // Only run on public routes (skip _next, api, static, etc)
 export const config = {
-  matcher: ['/((?!_next|api|static|favicon.ico).*)'],
+  matcher: ['/'],
 };
 
 const cookieOptions = {

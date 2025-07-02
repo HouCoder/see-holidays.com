@@ -3,7 +3,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import useSelectedRegions from '@/hooks/useSelectedRegions';
 import { useGlobalStore } from '@/providers/GlobalStoreProvider';
 
-const HolidaysInYear = () => {
+const HolidaysInYearTiny = () => {
   const currentYear = new Date().getFullYear();
   const { holidays, regionEmojiMap } = useGlobalStore((state) => state);
   const selectedRegions = useSelectedRegions();
@@ -49,4 +49,4 @@ const HolidaysInYear = () => {
   );
 };
 
-export default HolidaysInYear;
+export default HolidaysInYearTiny;

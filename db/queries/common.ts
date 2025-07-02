@@ -24,14 +24,12 @@ export const getHolidaysByRegionId = async (regionIds: number[]) => {
     .all();
 };
 
+export const getCounties = async () => {
+  return await db.select().from(country).all();
+};
+
 export const getRegions = async () => {
-  return await db
-    .select({
-      id: region.id,
-      name: region.name,
-    })
-    .from(region)
-    .all();
+  return await db.select().from(region).all();
 };
 
 type GroupedRegions = Record<
@@ -152,7 +150,9 @@ export const getRegionByName = async (regionName: string) => {
 export const getHolidaysByRegionName = async (regionName: string) => {
   return await db
     .select({
-      holidayName: holiday.name,
+      name: holiday.name,
+      description: holiday.description,
+      link: holiday.link,
       startDate: date.startDate,
       endDate: date.endDate,
       isWorkingDay: date.isWorkingDay,
@@ -162,5 +162,16 @@ export const getHolidaysByRegionName = async (regionName: string) => {
     .innerJoin(date, eq(holiday.id, date.holidayId))
     .where(eq(region.name, regionName))
     .orderBy(asc(date.startDate))
+    .all();
+};
+
+export const getRegionsByCountryId = async (countryId: number) => {
+  return await db
+    .select({
+      id: region.id,
+      name: region.name,
+    })
+    .from(region)
+    .where(eq(region.countryId, countryId))
     .all();
 };

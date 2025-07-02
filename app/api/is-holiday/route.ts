@@ -68,7 +68,7 @@ export async function GET(request: NextRequest) {
     }
 
     return {
-      holidayName: h.holidayName,
+      name: h.name,
       dates,
       isWorkingDay: h.isWorkingDay,
     };
@@ -79,7 +79,7 @@ export async function GET(request: NextRequest) {
   if (holiday) {
     return NextResponse.json({
       isWorkingDay: holiday.isWorkingDay,
-      holidayName: holiday.holidayName,
+      holidayName: holiday.name,
     });
   }
 

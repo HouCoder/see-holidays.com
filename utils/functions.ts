@@ -22,3 +22,11 @@ export const parseAsRegion = (selectOptions: SelectOption[]) => {
     },
   });
 };
+
+// South Australia -> south-australia, Canterbury (South) -> canterbury-south
+export const codefyString = (str: string) =>
+  str
+    .replace(/[^a-zA-Z0-9 ]/g, '')
+    .trim()
+    .replaceAll(' ', '-')
+    .toLocaleLowerCase();
