@@ -79,7 +79,7 @@ export async function GET(request: NextRequest) {
   if (holiday) {
     return NextResponse.json({
       isWorkingDay: holiday.isWorkingDay,
-      holidayName: holiday.name,
+      name: holiday.name,
     });
   }
 
@@ -89,12 +89,12 @@ export async function GET(request: NextRequest) {
     // Weekend
     return NextResponse.json({
       isWorkingDay: false,
-      holidayName: 'Standard weekend',
+      name: 'Standard weekend',
     });
   }
   // Weekday
   return NextResponse.json({
     isWorkingDay: true,
-    holidayName: 'Standard weekday',
+    name: 'Standard weekday',
   });
 }
