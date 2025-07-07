@@ -1,8 +1,13 @@
+import type { Metadata } from 'next';
 import Container from 'react-bootstrap/Container';
 import { getSelectOptions } from '@/db/queries/common';
 import { codefyString } from '@/utils/functions';
 
-export const metadata = {};
+export const metadata: Metadata = {
+  title: 'All Holidays - See Holidays',
+  description:
+    'All Holidays on See Holidays. See Holidays is your simple guide to official public holidays worldwide. Our easy-to-use calendar helps you track international holidays for seamless business and travel planning.',
+};
 
 const HolidaysPage = async () => {
   const allOptions = await getSelectOptions();
