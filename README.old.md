@@ -1,0 +1,49 @@
+# seeholidays.com
+
+## Things to do
+
+- [x] Restructure the code
+- [x] Support single region country, e.g. Taiwan
+- [x] (Optional) Add ESLint and Prettier or Biome
+- [x] Improve the UI
+  - [x] Make it beautify
+  - [x] Create a home page
+  - [x] Show region flag in the calendar events
+  - [x] Make it responsive
+  - [x] Order options alphabetically
+- [x] Import all the data (Australia, China)
+- [x] (Optional) Server side rendering (Next.js)
+- [x] SEO meta date, e.g. title, description, keywords
+- [x] Create google forms
+  - [x] Report incorrect holidays
+  - [x] Feedback / Contact us
+- [x] 🚢 Ship to production
+- [x] Migrate to Next.js
+- [x] Upgrade to React 19
+- [ ] Sitemap
+- [x] TypeScript
+- [x] CSS modules
+- [x] Auto select regions by IP
+- [ ] (Optional) Auto select date format and first weekday based on region
+- [x] Use API data
+- [ ] Sentry bug tracking
+- [x] Refactor database import script
+- [ ] Fix Next.js SSR issue
+- [ ] New regions to support
+  - [x] Hong Kong
+  - [x] Taiwan
+  - [x] Singapore
+  - [x] New Zealand
+  - [ ] Japan
+  - [ ] South Korea
+  - [ ] Malaysia
+  - [ ] Philippines
+- [ ] Paid Plans
+  - [ ] No ads
+  - [ ] Holiday API
+  - [ ] Slack/Email notification
+  - [ ] Google Calendar subscription
+
+## Links
+
+1. https://mantine.dev/

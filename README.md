@@ -1,49 +1,26 @@
-# seeholidays.com
+# See Holidays
 
-## Things to do
+See Holidays is your simple guide to official public holidays worldwide. Our easy-to-use calendar helps you track international holidays for seamless business and travel planning.
 
-- [x] Restructure the code
-- [x] Support single region country, e.g. Taiwan
-- [x] (Optional) Add ESLint and Prettier or Biome
-- [x] Improve the UI
-  - [x] Make it beautify
-  - [x] Create a home page
-  - [x] Show region flag in the calendar events
-  - [x] Make it responsive
-  - [x] Order options alphabetically
-- [x] Import all the data (Australia, China)
-- [x] (Optional) Server side rendering (Next.js)
-- [x] SEO meta date, e.g. title, description, keywords
-- [x] Create google forms
-  - [x] Report incorrect holidays
-  - [x] Feedback / Contact us
-- [x] 🚢 Ship to production
-- [x] Migrate to Next.js
-- [x] Upgrade to React 19
-- [ ] Sitemap
-- [x] TypeScript
-- [x] CSS modules
-- [x] Auto select regions by IP
-- [ ] (Optional) Auto select date format and first weekday based on region
-- [x] Use API data
-- [ ] Sentry bug tracking
-- [x] Refactor database import script
-- [ ] Fix Next.js SSR issue
-- [ ] New regions to support
-  - [x] Hong Kong
-  - [x] Taiwan
-  - [x] Singapore
-  - [x] New Zealand
-  - [ ] Japan
-  - [ ] South Korea
-  - [ ] Malaysia
-  - [ ] Philippines
-- [ ] Paid Plans
-  - [ ] No ads
-  - [ ] Holiday API
-  - [ ] Slack/Email notification
-  - [ ] Google Calendar subscription
+## Get started
 
-## Links
+### Prerequisites
 
-1. https://mantine.dev/
+Make sure the following tools are installed on your machine:
+
+- [mise](https://mise.jdx.dev/)
+- [pnpm](https://pnpm.io/)
+
+### Setup
+
+1. Clone the repo
+2. `$ pnpm install`
+3. `$ cp .env.example .env` and update the `.env` file with your environment variables
+4. `$ pnpm dev` to start the development server
+
+## External services used in this project
+
+- [Vercel](https://vercel.com/) for hosting
+- [Upstash](https://upstash.com/) for Redis
+- [Turso](https://turso.tech/) for SQLite database
+- [IPLocate](https://iplocate.io/) for IP geolocation
