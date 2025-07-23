@@ -44,3 +44,5 @@ next-env.d.ts
 # project related files
 *.db-shm
 *.db-wal
+
+certificates

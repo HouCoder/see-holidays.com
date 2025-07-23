@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:https": "next dev --turbopack --experimental-https --experimental-https-key ./certificates/key.pem --experimental-https-cert ./certificates/cert.pem",
+    "dev:auto-https": "next dev --turbopack --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "biome check --write ./ && tsc --noEmit",
