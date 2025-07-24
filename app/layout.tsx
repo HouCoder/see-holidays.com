@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import Footer from '@/components/Footer/Footer';
@@ -27,6 +28,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-5559GHWJ" />
       <head>
         <meta name="apple-mobile-web-app-title" content="See Holidays" />
         <link
